@@ -1,6 +1,6 @@
 import React from "react"
 // import VanillaTilt from "vanilla-tilt"
-import Project from "./Project"
+import Project from "./project.js"
 
 //PHOTOS
 import fifty from "../data/images/fifty.png"
