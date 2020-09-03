@@ -13,7 +13,11 @@ const Hero = () => {
         </h3>
       </div> */}
       <AnimatePresence>
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        <motion.div
+          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
           <h2>Hello, my name is Leroy Clarke Jr.</h2>
           <h3>
             I’m a Front-end Developer focused on creating modern, aesthetically

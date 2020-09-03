@@ -30,13 +30,14 @@ const Header = () => {
           className="nav-button"
           open={open}
           onClick={() => setOpen(!open)}
-          // style={{
-          //   backgroundColor: open ? "#fff" : "#000",
-          // }}
+          style={{
+            backgroundColor: open ? "#151515" : "#fcfefc",
+          }}
         >
           <div
             style={{
               transform: open ? "rotate(45deg)" : "rotate(0)",
+              background: open ? "#fcfefc" : "#151515",
             }}
           />
           <div
@@ -48,6 +49,7 @@ const Header = () => {
           <div
             style={{
               transform: open ? "rotate(-45deg)" : "rotate(0)",
+              background: open ? "#fcfefc" : "#151515",
             }}
           />
         </button>
