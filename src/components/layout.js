@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import chroma from "chroma-js"
 
 import Header from "./header"
 import "./layout.css"
@@ -23,23 +24,54 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const handleColorChange = () => {
+    const changer = document.querySelector("div.color-changer input")
+    const bodyTag = document.querySelector("body")
+    const projects = document.querySelector(".project")
+
+    const colorchg = document.querySelector(".color-changer p")
+    const color = chroma(changer.value)
+
+    if (color.luminance() < 0.3) {
+      bodyTag.classList.add("dark")
+      colorchg.classList.add("dark")
+    } else {
+      bodyTag.classList.remove("dark")
+      colorchg.classList.remove("dark")
+    }
+
+    bodyTag.style.backgroundColor = changer.value
+  }
+
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+      <Header />
+
+      <main id="content">{children}</main>
+      <div className="color-changer">
+        <p>Color</p>
+        <input type="color" onChange={handleColorChange}></input>
       </div>
+      <footer>
+        <div className="footer-copy">
+          <h2>Ready to chat?</h2>
+
+          <div className="contact-me">
+            <h5>
+              Feel free to reach out if you're looking for a developer, have a
+              question, or just want to connect.{" "}
+            </h5>
+            <p>
+              Email me at <a>hello@ldcjr.dev</a> !
+            </p>
+          </div>
+        </div>
+        <div className="footer-bar">
+          <a href="https://www.gatsbyjs.org">
+            Designed & Developed by <span>ME</span>
+          </a>
+        </div>
+      </footer>
     </>
   )
 }
