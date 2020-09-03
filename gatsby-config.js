@@ -24,7 +24,7 @@ module.exports = {
         background_color: `#0a70ff`,
         theme_color: `#0a70ff`,
         display: `minimal-ui`,
-        icon: `src/data/images/ldcjr-logo.png`, // This path is relative to the root of the site.
+        icon: `src/data/images/me.jpeg`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-sass`,

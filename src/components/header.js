@@ -57,7 +57,7 @@ const Header = () => {
           // style={{ transform: open ? "translatey(0)" : "translatey(-100%)" }}
           style={{
             opacity: open ? "1" : "0",
-            transform: open ? "translatey(0)" : "translatey(-100%)",
+            transform: open ? "translatex(0)" : "translatex(100%)",
           }}
         >
           <Link

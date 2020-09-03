@@ -129,9 +129,10 @@ div.color-changer .dark {
       flex-direction: column;
       justify-content: center;
       text-align: center;
-      background: $white;
+      background: $black;
+
       height: 100vh;
-      width: 100vw;
+      width: 400px;
       padding: 2rem;
       position: absolute;
       top: 0;
@@ -145,7 +146,8 @@ div.color-changer .dark {
       $white-space: nowrap;
       margin: 1rem 0;
       letter-spacing: 0.5rem;
-      color: $black;
+      // color: $black;
+      color: $white;
       text-decoration: none;
     }
     .nav-button {
