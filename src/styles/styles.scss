@@ -21,6 +21,7 @@ $granary-light: "Granary-Light", sans-serif;
 // COLORS
 $white: #fcfefc;
 $black: #151515;
+$dark-blue: #19323c;
 
 button,
 select,
@@ -29,9 +30,14 @@ input {
   font-size: inherit;
 }
 
+h1 {
+  font-size: 60px;
+  font-family: $granary-semi;
+}
+
 h2 {
   font-family: $granary-semi;
-  font-size: 60px;
+  font-size: 52px;
 }
 h3 {
   font-family: $granary-semi;
@@ -47,9 +53,13 @@ h5 {
   font-size: 24px;
   font-family: $granary-regular;
 }
+h6 {
+  font-family: $granary-semi;
+  font-size: 21px;
+}
 
 body {
-  background-color: #f5ffff;
+  background-color: $white;
   font-family: $granary-light;
   color: $black;
   transition: color 1s;
@@ -57,18 +67,21 @@ body {
 }
 
 body.dark {
-  color: $white;
+  color: $white !important;
 }
 
 div.color-changer {
-  z-index: 2;
+  // z-index: 2;
   position: fixed;
   bottom: 24px;
   right: 12px;
   padding: 8px 16px;
-  border: 2px solid $black;
+  // border: 2px solid $black;
+  border-style: solid;
+  border-width: 2px;
+  border-color: inherit;
   border-radius: 50px;
-  transition: color 1s;
+  transition: all 1s;
 
   input {
     position: absolute;
@@ -101,7 +114,6 @@ div.color-changer .dark {
   h3 {
     font-family: $granary-semi;
     $white-space: nowrap;
-    margin-bottom: 12px;
   }
 }
 
@@ -126,7 +138,6 @@ div.color-changer .dark {
   }
 
   #nav {
-    // position: relative;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -136,8 +147,9 @@ div.color-changer .dark {
       flex-direction: column;
       justify-content: center;
       text-align: center;
-      background: $black;
-
+      background: $dark-blue;
+      // border-left: 1px solid $black;
+      box-shadow: -5px 0px 10px;
       height: 100vh;
       width: 400px;
       padding: 2rem;
@@ -149,16 +161,15 @@ div.color-changer .dark {
     a {
       font-size: 40px;
       font-family: $granary-semi;
-      // text-transform: uppercase;
+
       $white-space: nowrap;
       margin: 1rem 0;
       letter-spacing: 0.5rem;
-      // color: $black;
+
       color: $white;
       text-decoration: none;
     }
     .nav-button {
-      // position: absolute;
       top: 3%;
       right: 2rem;
       display: flex;
@@ -191,7 +202,8 @@ div.color-changer .dark {
 #content {
   width: 100%;
   padding: 0 24px;
-  // max-width: 600px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 #hero {
@@ -199,8 +211,10 @@ div.color-changer .dark {
   width: 100%;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   padding-left: 100px;
-  padding-top: 120px;
+  transform: translatey(-100px);
+  // padding-top: 120px;
 
   h2 {
     margin-bottom: 30px;
@@ -212,27 +226,52 @@ div.color-changer .dark {
 }
 
 #projects {
+  padding-bottom: 48px;
+
+  div.github {
+    display: flex;
+    justify-content: center;
+    a {
+      font-family: $granary-semi;
+      font-size: 32px;
+      text-decoration: none;
+      text-align: center;
+      border-bottom-style: solid;
+      border-bottom-width: 3px;
+      border-bottom-color: inherit;
+      color: inherit;
+    }
+  }
+
   .projects-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 48px;
+    row-gap: 48px;
+    margin-bottom: 48px;
 
     .project {
       padding: 24px 0;
-      color: $black;
       border-radius: 5px;
 
       .image {
         width: 100%;
-        box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.3);
+        height: 100%;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
         transition: all 0.3s;
+        border-radius: 5px;
+        a {
+          border-bottom: none;
+        }
       }
 
       .project-copy {
         padding: 0 24px;
+        transition: color 1s;
       }
 
       img {
-        width: 100%;
+        // width: 100%;
         border-radius: 3px;
       }
 
@@ -251,6 +290,7 @@ div.color-changer .dark {
 
         li {
           font-size: 18px;
+          font-family: $granary-light;
         }
       }
 
@@ -258,32 +298,39 @@ div.color-changer .dark {
         text-decoration: none;
         font-size: 18px;
         padding-bottom: 5px;
-        color: $black;
-        border-bottom: 3px solid $black;
+        color: inherit;
+        border-bottom-style: solid;
+        border-bottom-width: 3px;
+        border-bottom-color: inherit;
       }
     }
 
-    .project .dark {
-      background-color: $white;
-      color: $white;
-    }
     .image:hover {
       transform: translateY(-10px);
     }
   }
 }
+#projects .dark {
+  color: $white;
+}
+
+div.project-copy .dark {
+  color: $white;
+}
 
 #about {
   margin-bottom: 48px;
   padding-top: 24px;
+  // max-height: 100vh;
+
   h2 {
     margin-bottom: 24px;
   }
 
   p {
     font-size: 24px;
-    margin-bottom: 12px;
-    line-height: 1.5;
+    margin-bottom: 24px;
+    line-height: 1.3;
     font-family: $granary-regular;
   }
   .about-hero {
@@ -298,12 +345,13 @@ div.color-changer .dark {
     .my-photo {
       background-image: url("../data/images/me.jpeg");
       background-size: contain;
-      background-position: center;
+      background-position: top top;
       background-repeat: no-repeat;
       position: sticky;
       top: 10%;
       left: 0;
       height: 100vh;
+      border-radius: 5px;
     }
 
     .about-body {
@@ -312,6 +360,8 @@ div.color-changer .dark {
 
     .my-identity {
       padding: 0 0 0 24px;
+      // overflow: auto;
+      margin-bottom: 20%;
     }
   }
 }
@@ -321,23 +371,21 @@ div.color-changer .dark {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 24px;
+  margin-bottom: 24px;
 
   .skills-container {
     display: flex;
     width: 100%;
+    margin-bottom: 48px;
     svg.icon {
       width: 100px;
       height: 100px;
       margin-bottom: 12px;
+      padding: 0 12px;
     }
     // .icon [fill] {
     //   fill: $white !important ;
     // }
-  }
-
-  h6 {
-    font-family: $granary-semi;
   }
 
   ul {
@@ -351,16 +399,20 @@ div.color-changer .dark {
     text-align: center;
     padding: 12px;
   }
+
+  .max600 {
+    max-width: 600px;
+    margin-bottom: 12px;
+  }
 }
 
 footer {
-  // min-height: 250px;
   padding: 48px 24px 0 24px;
   width: 100%;
-  background-color: $black;
+  background-color: $dark-blue;
   color: $white;
-
-  z-index: 12;
+  z-index: 1;
+  position: relative;
 
   .footer-copy {
     color: $white;
@@ -395,7 +447,6 @@ footer {
     width: 100%;
     display: flex;
     justify-content: center;
-    // background-color: $black;
     color: $white;
     padding-bottom: 5px;
 
@@ -403,8 +454,182 @@ footer {
     a {
       text-decoration: none;
       color: $white;
-      border-bottom: 2px $white solid;
+      border-bottom: 1px $white solid;
       font-family: $granary-regular;
     }
+  }
+}
+
+@media all and (max-width: 996px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  h3 {
+    font-size: 40px;
+  }
+
+  #hero {
+    padding-left: 50px;
+
+    h1 {
+      margin-bottom: 24px;
+    }
+  }
+
+  #projects {
+    .projects-container {
+      grid-template-columns: 1fr;
+      padding: 0 24px;
+    }
+  }
+  #about {
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    .about-hero {
+      flex-direction: column;
+
+      div.my-photo,
+      div.my-identity {
+        width: 100%;
+      }
+
+      .my-photo {
+        position: relative;
+        // background-size: cover;
+      }
+      .about-body {
+        margin-bottom: 24px;
+      }
+
+      .my-identity {
+        padding-bottom: 48px;
+        margin-bottom: 0;
+      }
+    }
+  }
+  #skills h5 {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  footer .footer-copy {
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+
+    h2 {
+      margin: 0 0 24px 0;
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 32px;
+  }
+  div.color-changer {
+    padding: 4px 12px;
+    p {
+      font-size: 12px;
+    }
+  }
+
+  #header #nav .nav-menu {
+    width: 100%;
+  }
+
+  #hero {
+    padding-left: 0px;
+  }
+
+  #projects {
+    div.github a {
+      font-size: 21px;
+    }
+    .projects-container {
+      row-gap: 24px;
+    }
+  }
+
+  #about {
+    // padding-top: 0;
+
+    .about-hero {
+      .my-photo {
+        background-size: cover;
+        background-position: center top;
+        height: 100vh;
+      }
+      .about-body {
+        padding-right: 50px;
+        text-align: justify;
+      }
+
+      .my-identity {
+        padding-left: 0;
+      }
+    }
+  }
+
+  #skills ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 480px) {
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 24px;
+  }
+
+  #header #nav .nav-menu a {
+    font-size: 32px;
+  }
+
+  #projects {
+    .projects-container .project {
+      p {
+        font-size: 16px;
+      }
+      ul {
+        li {
+          font-size: 16px;
+        }
+      }
+    }
+    div.github a {
+      font-size: 18px;
+      white-space: nowrap;
+    }
+  }
+
+  footer .footer-copy {
+    h2 {
+      font-size: 40px;
+    }
+
+    h5 {
+      font-size: 21px;
+    }
+
+    p {
+      font-size: 21px;
+    }
+  }
+
+  #about p {
+    font-size: 21px;
   }
 }

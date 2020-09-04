@@ -2,10 +2,12 @@ import React from "react"
 
 const Project = ({ img, title, description, stack, features, url }) => {
   return (
-    <div className="project">
+    <div className="project" key={title}>
       <div>
         <div className="image">
-          <img src={img} />
+          <a href={url}>
+            <img src={img} />
+          </a>
         </div>
 
         <div className="project-copy">
@@ -14,10 +16,11 @@ const Project = ({ img, title, description, stack, features, url }) => {
           <h5>Stack</h5>
           <ul>
             <li>{stack}</li>
-            <li>{features}</li>
           </ul>
 
-          <a href={url}>See Live</a>
+          <a href={url} className="url-link">
+            See Live
+          </a>
         </div>
       </div>
     </div>

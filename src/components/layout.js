@@ -27,7 +27,8 @@ const Layout = ({ children }) => {
   const handleColorChange = () => {
     const changer = document.querySelector("div.color-changer input")
     const bodyTag = document.querySelector("body")
-    const projects = document.querySelector(".project")
+    const projects = document.querySelector("#projects")
+    const project = document.querySelectorAll("div.project-copy")
 
     const colorchg = document.querySelector(".color-changer p")
     const color = chroma(changer.value)
@@ -35,12 +36,22 @@ const Layout = ({ children }) => {
     if (color.luminance() < 0.3) {
       bodyTag.classList.add("dark")
       colorchg.classList.add("dark")
+
+      // projects.classList.add("dark")
+
+      // for (let i = 0; i < project.length; ++i) project[i].classList.add("dark")
     } else {
       bodyTag.classList.remove("dark")
       colorchg.classList.remove("dark")
+      // projects.classList.remove("dark")
+
+      // for (let i = 0; i < project.length; ++i)
+      //   project[i].classList.remove("dark")
     }
 
     bodyTag.style.backgroundColor = changer.value
+
+    console.log(window.location.herf)
   }
 
   return (

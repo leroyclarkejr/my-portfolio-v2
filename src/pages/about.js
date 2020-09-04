@@ -163,10 +163,9 @@ const About = () => {
       <section id="skills">
         <div className="section-heading">
           <h3>My Skillset</h3>
-          <h6>
-            A set of tools & technologies I am comfortable with and competent
-            in.
-          </h6>
+          <h5>
+            A set of tools & technologies I am comfortable with & competent in.
+          </h5>
         </div>
 
         <div className="skills-container">
@@ -183,12 +182,11 @@ const About = () => {
           </ul>
         </div>
 
-        <div>
-          <h3>My Portfolio</h3>
-          <p>
-            Coded from scratch with the help of Gatsby/React.js, SASS, & Framer
-            Motion.
-          </p>
+        <div className="section-heading">
+          <h5 className="max600">
+            This portfolio was designed & coded from scratch with the help of
+            Gatsby/React.js, SASS, & Framer Motion.
+          </h5>
         </div>
       </section>
     </Layout>

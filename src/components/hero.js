@@ -18,7 +18,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
-          <h2>Hello, my name is Leroy Clarke Jr.</h2>
+          <h1>Hello, my name is Leroy Clarke Jr.</h1>
           <h3>
             I’m a Front-end Developer focused on creating modern, aesthetically
             pleasing websites for ambitious people & brands.

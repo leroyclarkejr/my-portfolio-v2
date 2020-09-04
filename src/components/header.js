@@ -31,7 +31,7 @@ const Header = () => {
           open={open}
           onClick={() => setOpen(!open)}
           style={{
-            backgroundColor: open ? "#151515" : "#fcfefc",
+            backgroundColor: open ? "#19323c" : "#fcfefc",
           }}
         >
           <div
@@ -58,7 +58,7 @@ const Header = () => {
           open={open}
           // style={{ transform: open ? "translatey(0)" : "translatey(-100%)" }}
           style={{
-            opacity: open ? "1" : "0",
+            boxShadow: open ? "-8px 0px 15px" : "none",
             transform: open ? "translatex(0)" : "translatex(100%)",
           }}
         >
@@ -74,6 +74,12 @@ const Header = () => {
             // activeClassName="active"
           >
             About
+          </Link>
+          <Link
+            to="/about/"
+            // activeClassName="active"
+          >
+            Resume
           </Link>
         </nav>
       </div>
