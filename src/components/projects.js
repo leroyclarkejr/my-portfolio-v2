@@ -82,7 +82,7 @@ const Projects = () => {
 
       <div className="github">
         <a href="https://github.com/ldcjrStudio">
-          View more projects & my code on Github!
+          View my code and more projects on Github!
         </a>
       </div>
     </section>

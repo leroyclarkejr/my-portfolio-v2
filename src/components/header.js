@@ -1,37 +1,60 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
+import chroma from "chroma-js"
 
 import React, { useState, useRef } from "react"
 import { useOnClickOutside } from "./hooks"
+import paint from "../data/icons/paint6.svg"
 
-import logowht from "../data/images/LDCJR-logo.png"
+// import logowht from "../data/images/LDCJR-logo.png"
 import logoblk from "../data/images/LDCJR-logo-blk.png"
+import github from "../data/icons/github.svg"
+import linkedin from "../data/icons/linkedin.svg"
 
 const Header = () => {
   const [open, setOpen] = useState(false)
   const node = useRef()
   useOnClickOutside(node, () => setOpen(false))
 
+  const handleColorChange = () => {
+    const changer = document.querySelector("div.color-changer input")
+    const bodyTag = document.querySelector("body")
+
+    const colorchg = document.querySelector(".color-changer")
+    const color = chroma(changer.value)
+
+    if (color.luminance() < 0.3) {
+      bodyTag.classList.add("dark")
+      colorchg.classList.add("dark")
+    } else {
+      bodyTag.classList.remove("dark")
+      colorchg.classList.remove("dark")
+    }
+
+    bodyTag.style.backgroundColor = changer.value
+
+    console.log(window.location.herf)
+  }
+
   return (
     <header id="header">
       <div className="image">
         <Link to="/">
-          <img src={logoblk} />
+          <img src={logoblk} alt="LDCJR Logo" />
         </Link>
       </div>
 
-      {/* <nav>
-        <Link to="/">Work</Link>
-        <Link to="/about">About</Link>
-      </nav> */}
-
       <div id="nav" ref={node}>
+        <div className="color-changer">
+          {/* <p>Color</p> */}
+          <img src={paint} alt="Change Background Color" />
+          <input type="color" onChange={handleColorChange}></input>
+        </div>
         <button
           className="nav-button"
           open={open}
           onClick={() => setOpen(!open)}
           style={{
-            backgroundColor: open ? "#19323c" : "#fcfefc",
+            backgroundColor: open ? "#151515" : "#fcfefc",
           }}
         >
           <div
@@ -58,21 +81,15 @@ const Header = () => {
           open={open}
           // style={{ transform: open ? "translatey(0)" : "translatey(-100%)" }}
           style={{
-            boxShadow: open ? "-8px 0px 15px" : "none",
+            boxShadow: open ? "-8px 0px 15px #151515" : "none",
             transform: open ? "translatex(0)" : "translatex(100%)",
           }}
         >
-          <Link
-            to="/"
-            // activeClassName="active"
-          >
+          <Link to="/" activeClassName="active">
             Work
           </Link>
 
-          <Link
-            to="/about/"
-            // activeClassName="active"
-          >
+          <Link to="/about/" activeClassName="active">
             About
           </Link>
           <Link
@@ -81,6 +98,24 @@ const Header = () => {
           >
             Resume
           </Link>
+
+          <div className="socials">
+            <p>Connect with me</p>
+            <div className="social-icons">
+              <Link to="https://github.com/ldcjrStudio">
+                <img src={github} />
+              </Link>
+              <Link to="https://www.linkedin.com/in/leroy-clarke-jr/">
+                <img src={linkedin} />
+              </Link>
+            </div>
+          </div>
+          <div className="email">
+            <p>Or drop me an email </p>
+            <a href="mailto:hello@ldcjr.dev" className="mailto">
+              hello@ldcjr.dev
+            </a>
+          </div>
         </nav>
       </div>
     </header>
