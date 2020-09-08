@@ -76,7 +76,7 @@ const Header = () => {
             About
           </Link>
           <Link
-            to="/about/"
+            to="https://personal-things.s3.amazonaws.com/LDCJR-resume.pdf"
             // activeClassName="active"
           >
             Resume

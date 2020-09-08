@@ -214,6 +214,10 @@ div.color-changer .dark {
   align-items: center;
   padding-left: 100px;
   transform: translatey(-100px);
+  background-image: url("../data/images/background.jpg");
+  background-repeat: none;
+  background-size: cover;
+
   // padding-top: 120px;
 
   h2 {

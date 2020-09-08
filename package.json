@@ -5,9 +5,10 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "acorn": "^6.4.1",
     "chroma-js": "^2.1.0",
     "framer-motion": "^2.6.5",
-    "gatsby": "^2.24.50",
+    "gatsby": "^2.24.53",
     "gatsby-image": "^2.4.16",
     "gatsby-plugin-manifest": "^2.4.24",
     "gatsby-plugin-offline": "^3.2.24",
@@ -19,9 +20,10 @@
     "node-sass": "^4.14.1",
     "pattern.css": "^1.0.0",
     "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
     "react-helmet": "^6.1.0",
+    "react-refresh": "^0.8.2",
     "react-reveal": "^1.2.2"
   },
   "devDependencies": {
