@@ -4,9 +4,8 @@ import { useScrollRestoration } from "gatsby"
 import { motion, AnimatePresence } from "framer-motion"
 
 const Hero = () => {
-  const scrollTop = useScrollRestoration()
   return (
-    <section id="hero" className="" {...scrollTop}>
+    <section id="hero" className="pattern-vertical-lines-xl">
       <div className="hero-overlay"></div>
       <div className="hero-copy">
         <h2>Hello, my name is Leroy Clarke Jr.</h2>
