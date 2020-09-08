@@ -7,14 +7,15 @@ const Hero = () => {
   const scrollTop = useScrollRestoration()
   return (
     <section id="hero" className="" {...scrollTop}>
-      {/* <div className="hero-copy">
+      <div className="hero-overlay"></div>
+      <div className="hero-copy">
         <h2>Hello, my name is Leroy Clarke Jr.</h2>
         <h3>
           I’m a Front-end Developer focused on creating modern, aesthetically
           pleasing websites for ambitious people & brands.
         </h3>
-      </div> */}
-      <AnimatePresence>
+      </div>
+      {/* <AnimatePresence>
         <motion.div
           transition={{ duration: 0.5 }}
           initial={{ opacity: 0 }}
@@ -26,7 +27,7 @@ const Hero = () => {
             pleasing websites for ambitious people & brands.
           </h3>
         </motion.div>
-      </AnimatePresence>
+      </AnimatePresence> */}
     </section>
   )
 }

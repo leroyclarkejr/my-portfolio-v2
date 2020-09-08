@@ -231,9 +231,17 @@ div.color-changer .dark {
 
 #content {
   width: 100%;
+  // padding: 0 24px;
+  // max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section {
   padding: 0 24px;
   max-width: 1200px;
-  margin: 0 auto;
 }
 
 #hero {
@@ -244,14 +252,29 @@ div.color-changer .dark {
   align-items: center;
   padding-left: 100px;
   transform: translatey(-100px);
-  background-image: url("../data/images/background.jpg");
+  // background-image: url("../data/images/background.jpg");
   background-repeat: none;
   background-size: cover;
+  background-color: inherit;
+  max-width: none;
+  position: relative;
+
+  // .hero-overlay {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: inherit;
+  //   opacity: 0.9;
+  //   z-index: -1;
+  // }
 
   // padding-top: 120px;
 
   h2 {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 
   h3 {
