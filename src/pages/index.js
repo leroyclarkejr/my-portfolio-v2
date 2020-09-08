@@ -1,5 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
+
+// import { useScrollRestoration } from "gatsby-react-router-scroll"
 
 //components
 import Layout from "../components/layout"
@@ -15,13 +16,15 @@ import "../styles/base.css"
 import "../styles/styles.scss"
 import "../styles/pattern.min.css"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
+const IndexPage = () => {
+  return (
+    <Layout>
+      <SEO title="Home" />
 
-    <Hero />
-    <Projects />
-  </Layout>
-)
+      <Hero />
+      <Projects />
+    </Layout>
+  )
+}
 
 export default IndexPage

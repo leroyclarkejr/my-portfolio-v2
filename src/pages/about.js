@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 
 import Layout from "../components/layout"
 
@@ -6,6 +6,10 @@ import Layout from "../components/layout"
 import HTML5 from "../data/icons/html5.svg"
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    console.log(window)
+  }, [window])
   const skills = [
     {
       name: "HTML5",

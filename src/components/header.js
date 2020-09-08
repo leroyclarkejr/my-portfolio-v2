@@ -1,4 +1,5 @@
 import { Link } from "gatsby"
+
 import chroma from "chroma-js"
 
 import React, { useState, useRef } from "react"
@@ -31,8 +32,11 @@ const Header = () => {
     }
 
     bodyTag.style.backgroundColor = changer.value
+  }
 
-    console.log(window.location.herf)
+  const handleClick = () => {
+    console.log("ok")
+    window.scrollTo({ top: 0, behavior: `smooth` })
   }
 
   return (

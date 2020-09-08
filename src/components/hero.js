@@ -1,10 +1,12 @@
 import React from "react"
+import { useScrollRestoration } from "gatsby"
 
 import { motion, AnimatePresence } from "framer-motion"
 
 const Hero = () => {
+  const scrollTop = useScrollRestoration()
   return (
-    <section id="hero" className="">
+    <section id="hero" className="" {...scrollTop}>
       {/* <div className="hero-copy">
         <h2>Hello, my name is Leroy Clarke Jr.</h2>
         <h3>
