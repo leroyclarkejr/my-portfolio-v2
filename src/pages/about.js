@@ -146,20 +146,43 @@ const About = () => {
               </p>
 
               <p>
-                I ultimately decided to learn to code because of my love for
-                technology and appreciation for digital multimedia art. I'm a
-                creative person at heart and coding has given me a pathway to
-                unleash my creativity, while also challenging myself
-                technically.
+                I am team oriented, agile, reliable, and eager to make use of my
+                skillset to solve problems for businesses and users. I am
+                constantly pushing myself out of my comfort zone to evolve how I
+                can make a difference with my web development knowledge.
               </p>
               <p>
-                I'm a team oriented, self starter with strong leadership
-                qualities and it has become my purpose to help ambitious people
-                and brands maximize their potential in the digital world as a
-                Front-end Web Developer.
+                My drive for improvement is mostly attributed to being a gymnast
+                for 23 years of my life. My experience as a gymnast has helped
+                me rise to leadership positions and become a 3x All-American in
+                the sport.
+              </p>
+              <p>
+                After graduating Penn State University and subsequently retiring
+                from Gymnastics, I experienced this persistent feeling that
+                something was missing from my life. I was missing a sense of
+                fulfillment and having that special "thing" I wanted to share
+                with the world.
               </p>
             </div>
           </div>
+        </div>
+
+        <div className="more-about">
+          <p>
+            I ultimately decided to learn to code because of my love for
+            technology and appreciation for digital multimedia art. It was
+            bestowed upon me that with just the right combination of HTML, CSS,
+            and Javascript you could create the most beautiful web interfaces
+            with some pretty dope animations. I'm a creative person at heart so
+            this really spoke to me.
+          </p>
+          <p>
+            Coding has given me a pathway to unleash my creativity, while also
+            challenging myself technically. It has become my purpose to help
+            ambitious people and brands maximize their potential in the digital
+            work as a Front-end Web Developer.
+          </p>
         </div>
       </section>
 
