@@ -122,25 +122,30 @@ const About = () => {
         <div className="about-hero">
           <div className="my-photo"></div>
           <div className="my-identity">
-            <h2>
+            <h2
+              data-sal="slide-up"
+              data-sal-delay="100"
+              data-sal-easing="ease-out-back"
+              dat-sal-duration="2000"
+            >
               Former pro gymnast, Penn State Graduate, Creative problem solver,
             </h2>
-            <div className="about-body">
+            <div
+              className="about-body"
+              data-sal="slide-up"
+              data-sal-delay="300"
+              data-sal-easing="ease-out-back"
+              dat-sal-duration="2000"
+            >
               <p>
                 My name is Leroy Clarke Jr and I am a front-end web developer
                 living in New Jersey.
-              </p>
-              <p>
-                My constant drive for improvement and mastery of my craft is
-                mostly attributed to being a gymnast for 22 years of my life.
-                The fruits of my labor have helped me rise to leadership
-                positions and become a 3x All-American in the sport.{" "}
               </p>
 
               <p>
                 My passion for coding & web development was sparked when I
                 stumbled upon, Superhi.com, where they specialize in teaching
-                coding for creatives.
+                coding for designers.
               </p>
               <p>
                 I ultimately decided to learn to code because of my love for
@@ -162,8 +167,20 @@ const About = () => {
 
       <section id="skills">
         <div className="section-heading">
-          <h3>My Skillset</h3>
-          <h5>
+          <h3
+            data-sal="slide-up"
+            data-sal-delay="100"
+            data-sal-easing="ease-out-back"
+            dat-sal-duration="2000"
+          >
+            My Skillset
+          </h3>
+          <h5
+            data-sal="slide-up"
+            data-sal-delay="300"
+            data-sal-easing="ease-out-back"
+            dat-sal-duration="2000"
+          >
             A set of tools & technologies I am comfortable with & competent in.
           </h5>
         </div>
@@ -172,7 +189,12 @@ const About = () => {
           <ul>
             {skills.map(skill => {
               return (
-                <li>
+                <li
+                  data-sal="slide-up"
+                  data-sal-delay="100"
+                  data-sal-easing="ease-out-back"
+                  dat-sal-duration="2000"
+                >
                   {/* <img src={skill.icon} className="icon" /> */}
                   {React.cloneElement(skill.icon, { className: "icon" })}
                   <h6>{skill.name}</h6>
@@ -183,7 +205,13 @@ const About = () => {
         </div>
 
         <div className="section-heading">
-          <h5 className="max600">
+          <h5
+            className="max600"
+            data-sal="slide-up"
+            data-sal-delay="100"
+            data-sal-easing="ease-out-back"
+            dat-sal-duration="2000"
+          >
             This portfolio was designed & coded from scratch with the help of
             Gatsby/React.js, SASS, & Framer Motion.
           </h5>

@@ -80,7 +80,13 @@ const Projects = () => {
         ))}
       </div>
 
-      <div className="github">
+      <div
+        className="github"
+        data-sal="slide-up"
+        data-sal-delay="100"
+        data-sal-easing="ease-out-back"
+        dat-sal-duration="2000"
+      >
         <a href="https://github.com/ldcjrStudio">
           View my code and more projects on Github!
         </a>
