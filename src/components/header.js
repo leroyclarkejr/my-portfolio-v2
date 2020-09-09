@@ -93,7 +93,7 @@ const Header = () => {
             About
           </Link>
           <OutboundLink
-            to="https://personal-things.s3.amazonaws.com/LDCJR-resume.pdf"
+            href="https://personal-things.s3.amazonaws.com/LDCJR-resume.pdf"
             // activeClassName="active"
           >
             Resume
