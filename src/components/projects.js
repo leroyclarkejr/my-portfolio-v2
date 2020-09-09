@@ -10,7 +10,7 @@ import tb from "../data/images/tb.jpg"
 import nt from "../data/images/nt.jpg"
 import jiffy from "../data/images/jiffy.jpg"
 
-const Projects = () => {
+const Projects = props => {
   const data = [
     {
       title: "Fifty Festival",

@@ -1,6 +1,12 @@
 import React from "react"
 import sal from "sal.js"
 
+const Highlight = ({ color, children }) => (
+  <span className={`relative highlight highlight-${color}`}>
+    <span className="relative z-2">{children}</span>
+  </span>
+)
+
 const Hero = () => {
   return (
     <section id="hero" className="pattern-vertical-lines-xl">
@@ -11,15 +17,18 @@ const Hero = () => {
         data-sal-easing="ease-out-back"
         dat-sal-duration="1000"
       >
-        <h2>Hello, my name is Leroy Clarke Jr.</h2>
+        <h2>
+          Hello, my name is <Highlight color="blue">Leroy Clarke Jr.</Highlight>
+        </h2>
         <h3
           data-sal="slide-up"
           data-sal-delay="300"
           data-sal-easing="ease-out-back"
           dat-sal-duration="2000"
         >
-          I’m a Front-end Developer focused on creating modern, aesthetically
-          pleasing websites for ambitious people & brands.
+          I’m a <Highlight color="blue">Front-end Developer</Highlight> focused
+          on creating modern, aesthetically pleasing websites for ambitious
+          people & brands.
         </h3>
       </div>
     </section>

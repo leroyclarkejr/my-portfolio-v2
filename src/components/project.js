@@ -1,7 +1,8 @@
 import React from "react"
 import sal from "sal.js"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
-const Project = ({ img, title, description, stack, features, url }) => {
+const Project = ({ img, title, description, stack, features, url, props }) => {
   return (
     <div className="project" key={title}>
       <div>
@@ -12,7 +13,7 @@ const Project = ({ img, title, description, stack, features, url }) => {
           dat-sal-duration="2000"
         >
           <a href={url}>
-            <img src={img} />
+            <img src={img} alt={title} />
           </a>
         </div>
 
@@ -30,9 +31,9 @@ const Project = ({ img, title, description, stack, features, url }) => {
             <li>{stack}</li>
           </ul>
 
-          <a href={url} className="url-link">
+          <OutboundLink href={url} className="url-link">
             See Live
-          </a>
+          </OutboundLink>
         </div>
       </div>
     </div>

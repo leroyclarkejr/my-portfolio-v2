@@ -3,9 +3,15 @@ module.exports = {
     title: `Leroy Clarke Jr. Front-end Developer`,
     description: `Front-end developer`,
     author: `@ldcjr`,
+    description: "",
+    image: "",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -13,9 +19,7 @@ module.exports = {
         path: `${__dirname}/src/data/images`,
       },
     },
-    `gatsby-transformer-sharp`,
 
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -24,7 +28,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#0a70ff`,
         theme_color: `#0a70ff`,
-        display: `minimal-ui`,
+        display: `standalone`,
         icon: `src/data/images/me.jpeg`, // This path is relative to the root of the site.
       },
     },
@@ -33,19 +37,16 @@ module.exports = {
       options: {
         threshold: 0.35, // Percentage of an element's area that needs to be visible to launch animation
         once: true, // Defines if animation needs to be launched once
-        disable: false, // Flag for disabling animations
-        // Advanced Options
-        selector: "[data-sal]", // Selector of the elements to be animated
-        animateClassName: "sal-animate", // Class name which triggers animation
-        disabledClassName: "sal-disabled", // Class name which defines the disabled state
-        rootMargin: "0% 50%", // Corresponds to root's bounding box margin
-        enterEventName: "sal:in", // Enter event name
-        exitEventName: "sal:out", // Exit event name
       },
     },
-    `gatsby-plugin-sass`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "UA-167200825-3",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false,
+      },
+    },
   ],
 }

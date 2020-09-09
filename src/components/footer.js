@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+
 import logowht from "../data/images/LDCJR-logo.png"
 import github from "../data/icons/github.svg"
 import linkedin from "../data/icons/linkedin.svg"
@@ -9,7 +9,7 @@ const Footer = () => {
     <footer>
       <div className="footer-copy">
         <div className="footer-left">
-          <img src={logowht} />
+          <img src={logowht} alt="LDCJR Logo" />
 
           <div>
             <h3>Leroy D. Clarke Jr.</h3>
@@ -26,12 +26,12 @@ const Footer = () => {
             Email me at <a>hello@ldcjr.dev</a> !
           </p>
           <div>
-            <Link to="https://github.com/ldcjrStudio">
+            <a href="https://github.com/ldcjrStudio">
               <img src={github} />
-            </Link>
-            <Link to="https://www.linkedin.com/in/leroy-clarke-jr/">
+            </a>
+            <a href="https://www.linkedin.com/in/leroy-clarke-jr/">
               <img src={linkedin} />
-            </Link>
+            </a>
           </div>
         </div>
       </div>

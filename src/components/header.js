@@ -1,15 +1,16 @@
 import { Link } from "gatsby"
+import React, { useState, useRef } from "react"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import chroma from "chroma-js"
 
-import React, { useState, useRef } from "react"
 import { useOnClickOutside } from "./hooks"
-import paint from "../data/icons/paint6.svg"
 
 // import logowht from "../data/images/LDCJR-logo.png"
 import logoblk from "../data/images/LDCJR-logo-blk.png"
 import github from "../data/icons/github.svg"
 import linkedin from "../data/icons/linkedin.svg"
+import paint from "../data/icons/paint6.svg"
 
 const Header = () => {
   const [open, setOpen] = useState(false)
@@ -32,11 +33,6 @@ const Header = () => {
     }
 
     bodyTag.style.backgroundColor = changer.value
-  }
-
-  const handleClick = () => {
-    console.log("ok")
-    window.scrollTo({ top: 0, behavior: `smooth` })
   }
 
   return (
@@ -96,12 +92,12 @@ const Header = () => {
           <Link to="/about/" activeClassName="active">
             About
           </Link>
-          <Link
+          <OutboundLink
             to="https://personal-things.s3.amazonaws.com/LDCJR-resume.pdf"
             // activeClassName="active"
           >
             Resume
-          </Link>
+          </OutboundLink>
 
           <div className="socials">
             <p>Connect with me</p>
