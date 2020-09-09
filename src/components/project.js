@@ -32,7 +32,7 @@ const Project = ({ img, title, description, stack, features, url, props }) => {
           </ul>
 
           <OutboundLink href={url} className="url-link">
-            See Live
+            {url === "#" ? "Coming Soon!" : "See Live"}
           </OutboundLink>
         </div>
       </div>

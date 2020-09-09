@@ -117,7 +117,13 @@ const About = () => {
     <Layout>
       <section id="about">
         <div className="about-hero">
-          <div className="my-photo"></div>
+          <div
+            className="my-photo"
+            data-sal="slide-up"
+            data-sal-delay="100"
+            data-sal-easing="ease-out-back"
+            dat-sal-duration="2000"
+          ></div>
           <div className="my-identity">
             <h2
               data-sal="slide-up"

@@ -14,7 +14,7 @@ const Hero = () => {
       <div
         className="hero-copy"
         data-sal="slide-up"
-        data-sal-easing="ease-out-back"
+        data-sal-easing="ease-out-bounce"
         dat-sal-duration="1000"
       >
         <h2>
@@ -23,7 +23,7 @@ const Hero = () => {
         <h3
           data-sal="slide-up"
           data-sal-delay="300"
-          data-sal-easing="ease-out-back"
+          data-sal-easing="ease-out-bounce"
           dat-sal-duration="2000"
         >
           I’m a <Highlight color="blue">Front-end Developer</Highlight> focused
