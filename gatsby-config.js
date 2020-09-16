@@ -1,10 +1,15 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Leroy Clarke Jr. Front-end Developer`,
-    description: `Front-end developer`,
-    author: `@ldcjr`,
-    description: "",
-    image: "",
+    author: `Leroy Clarke Jr.`,
+    description: `Leroy Clarke Jr. is a front end developer focused on creating modern, aesthetically pleasing websites for ambitious people & brands.`,
+    image: `src/data/images/me.jpeg`,
+    url: `https://ldcjr.dev`,
+    twitterUsername: `@ldcjr_`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -12,6 +17,16 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-offline`,
+    `gatsby-image`,
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

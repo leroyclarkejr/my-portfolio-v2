@@ -22,6 +22,7 @@ $granary-light: "Granary-Light", sans-serif;
 $white: #fcfefc;
 $black: #151515;
 $dark-blue: #19323c;
+$blue-hero: #09b6f9;
 $blue: #0a70ff;
 
 button,
@@ -139,7 +140,7 @@ div.color-changer .dark {
   border-radius: 3px;
 }
 .highlight-blue:before {
-  background-color: $blue;
+  background-color: $blue-hero;
 }
 
 .section-heading {
@@ -166,7 +167,7 @@ div.color-changer .dark {
   align-items: center;
   padding: 12px 24px 12px 24px;
   // border-bottom: 1px solid $white;
-  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px;
   // background-color: $black;
   background-color: rgba(252, 254, 252, 0.95);
   z-index: 10;
@@ -289,8 +290,6 @@ section {
   padding-left: 100px;
   transform: translatey(-100px);
   // background-image: url("../data/images/background.jpg");
-  background-repeat: none;
-  background-size: cover;
   background-color: inherit;
   max-width: none;
   position: relative;
@@ -336,7 +335,7 @@ section {
       .image {
         width: 100%;
         height: 100%;
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
         transition: all 0.3s;
         border-radius: 5px;
         a {
@@ -423,12 +422,12 @@ div.project-copy .dark {
     }
 
     .my-photo {
-      background-image: url("../data/images/me.jpeg");
-      background-size: contain;
-      background-position: top top;
-      background-repeat: no-repeat;
+      // background-image: url("../data/images/me.jpeg");
+      // background-size: contain;
+      // background-position: top top;
+      // background-repeat: no-repeat;
 
-      height: 100vh;
+      // height: 100vh;
       border-radius: 5px;
     }
 

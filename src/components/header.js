@@ -81,7 +81,7 @@ const Header = () => {
           open={open}
           // style={{ transform: open ? "translatey(0)" : "translatey(-100%)" }}
           style={{
-            boxShadow: open ? "-8px 0px 15px #151515" : "none",
+            boxShadow: open ? "-5px 0px 10px #151515" : "none",
             transform: open ? "translatex(0)" : "translatex(100%)",
           }}
         >

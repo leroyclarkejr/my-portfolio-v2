@@ -1,8 +1,10 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 
-const About = () => {
+const About = data => {
   const skills = [
     {
       name: "HTML5",
@@ -113,6 +115,7 @@ const About = () => {
       ),
     },
   ]
+
   return (
     <Layout>
       <section id="about">
@@ -123,7 +126,9 @@ const About = () => {
             data-sal-delay="100"
             data-sal-easing="ease-out-back"
             dat-sal-duration="2000"
-          ></div>
+          >
+            <Img fluid={data.image.childImageSharp.fluid} />
+          </div>
           <div className="my-identity">
             <h2
               data-sal="slide-up"
@@ -241,5 +246,18 @@ const About = () => {
     </Layout>
   )
 }
+
+// const data = useStaticQuery(graphql`
+//   query MyQuery {
+//     file(relativePath: { eq: "me.jpeg" }) {
+//       id
+//       childImageSharp {
+//         fluid {
+//           tracedSVG
+//         }
+//       }
+//     }
+//   }
+// `)
 
 export default About

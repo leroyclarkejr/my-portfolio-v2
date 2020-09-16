@@ -23,7 +23,7 @@ const Footer = () => {
             question, or just want to connect.{" "}
           </h5>
           <p>
-            Email me at <a>hello@ldcjr.dev</a> !
+            Email me at <a mailto="hello@ldcjr.dev">hello@ldcjr.dev</a> !
           </p>
           <div>
             <a href="https://github.com/ldcjrStudio">
