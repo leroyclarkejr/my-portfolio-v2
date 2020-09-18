@@ -103,10 +103,10 @@ const Header = () => {
             <p>Connect with me</p>
             <div className="social-icons">
               <Link to="https://github.com/ldcjrStudio">
-                <img src={github} />
+                <img src={github} alt="Github Logo" />
               </Link>
               <Link to="https://www.linkedin.com/in/leroy-clarke-jr/">
-                <img src={linkedin} />
+                <img src={linkedin} alt="LinkedIn Logo" />
               </Link>
             </div>
           </div>

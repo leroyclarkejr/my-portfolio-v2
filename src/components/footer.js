@@ -1,4 +1,6 @@
 import React from "react"
+import { Link } from "gatsby"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import logowht from "../data/images/LDCJR-logo.png"
 import github from "../data/icons/github.svg"
@@ -26,19 +28,20 @@ const Footer = () => {
             Email me at <a mailto="hello@ldcjr.dev">hello@ldcjr.dev</a> !
           </p>
           <div>
-            <a href="https://github.com/ldcjrStudio">
-              <img src={github} />
-            </a>
-            <a href="https://www.linkedin.com/in/leroy-clarke-jr/">
-              <img src={linkedin} />
-            </a>
+            <OutboundLink href="https://github.com/ldcjrStudio">
+              <img src={github} alt="Linked to Github" />
+            </OutboundLink>
+
+            <OutboundLink href="https://www.linkedin.com/in/leroy-clarke-jr/">
+              <img src={linkedin} alt="Link to LinkedIn" />
+            </OutboundLink>
           </div>
         </div>
       </div>
       <div className="footer-bar">
-        <a href="https://ldcjr.dev/about">
+        <Link to="https://ldcjr.dev/about">
           Designed & Developed by <span>ME</span>
-        </a>
+        </Link>
       </div>
     </footer>
   )
