@@ -15,7 +15,7 @@ function SEO({ description, lang, meta, title, image, url }) {
   const { pathname } = useLocation()
   const { data } = useStaticQuery(
     graphql`
-      query SEO {
+      query {
         site {
           siteMetadata {
             title
@@ -50,7 +50,7 @@ function SEO({ description, lang, meta, title, image, url }) {
         },
         {
           property: `og:site_name`,
-          content: site.SiteMetadata.title,
+          content: data.site.SiteMetadata.title,
         },
         {
           property: `og:description`,
