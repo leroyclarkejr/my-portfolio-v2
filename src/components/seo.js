@@ -13,7 +13,7 @@ import { useLocation } from "@reach/router"
 
 function SEO({ description, lang, meta, title, image, url }) {
   const { pathname } = useLocation()
-  const { site } = useStaticQuery(
+  const { data } = useStaticQuery(
     graphql`
       query SEO {
         site {
@@ -34,19 +34,19 @@ function SEO({ description, lang, meta, title, image, url }) {
       htmlAttributes={{
         lang,
       }}
-      title={site.SiteMetadata.title}
+      title={data.site.SiteMetadata.title}
       meta={[
         {
           name: `description`,
-          content: site.SiteMetadata.description,
+          content: data.site.SiteMetadata.description,
         },
         {
           name: `image`,
-          content: site.SiteMetadata.image,
+          content: data.site.SiteMetadata.image,
         },
         {
           property: `og:title`,
-          content: site.SiteMetadata.title,
+          content: data.site.SiteMetadata.title,
         },
         {
           property: `og:site_name`,
@@ -54,7 +54,7 @@ function SEO({ description, lang, meta, title, image, url }) {
         },
         {
           property: `og:description`,
-          content: site.SiteMetadata.description,
+          content: data.site.SiteMetadata.description,
         },
         {
           property: `og:type`,
@@ -62,7 +62,7 @@ function SEO({ description, lang, meta, title, image, url }) {
         },
         {
           propert: `og:image`,
-          content: site.SiteMetadata.image,
+          content: data.site.SiteMetadata.image,
         },
         {
           property: `og:url`,
