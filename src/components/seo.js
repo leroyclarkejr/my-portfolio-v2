@@ -34,7 +34,7 @@ function SEO({ description, lang, meta, title, image, url }) {
       htmlAttributes={{
         lang,
       }}
-      title={data.site.SiteMetadata.title}
+      title="Leroy Clarke Jr. Front-end Developer"
       meta={[
         {
           name: `description`,
