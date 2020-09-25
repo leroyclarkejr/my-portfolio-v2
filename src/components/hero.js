@@ -9,7 +9,7 @@ const Highlight = ({ color, children }) => (
 
 const Hero = () => {
   return (
-    <section id="hero" className="pattern-vertical-lines-xl">
+    <section id="hero" className="pattern-dots-sm">
       <div className="hero-overlay"></div>
       <div
         className="hero-copy"

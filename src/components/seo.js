@@ -11,9 +11,9 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import { useLocation } from "@reach/router"
 
-function SEO({ description, lang, meta, title, image, url }) {
+function SEO({ description, lang, meta, title, image: metaImage }) {
   const { pathname } = useLocation()
-  const { data } = useStaticQuery(
+  const { site } = useStaticQuery(
     graphql`
       query {
         site {
@@ -29,32 +29,39 @@ function SEO({ description, lang, meta, title, image, url }) {
     `
   )
 
+  const metaDescription = description || site.siteMetadata.description
+  const image =
+    metaImage && metaImage.src
+      ? `${site.siteMetadata.siteUrl}${metaImage.src}`
+      : null
+
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title="Leroy Clarke Jr. Front-end Developer"
+      title={title}
+      titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
-          content: data.site.SiteMetadata.description,
+          content: metaDescription,
         },
         {
           name: `image`,
-          content: data.site.SiteMetadata.image,
+          content: image,
         },
         {
           property: `og:title`,
-          content: data.site.SiteMetadata.title,
+          content: title,
         },
         {
           property: `og:site_name`,
-          content: data.site.SiteMetadata.title,
+          content: title,
         },
         {
           property: `og:description`,
-          content: data.site.SiteMetadata.description,
+          content: metaDescription,
         },
         {
           property: `og:type`,
@@ -62,7 +69,7 @@ function SEO({ description, lang, meta, title, image, url }) {
         },
         {
           propert: `og:image`,
-          content: data.site.SiteMetadata.image,
+          content: image,
         },
         {
           property: `og:url`,
@@ -76,7 +83,7 @@ function SEO({ description, lang, meta, title, image, url }) {
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
-  description: null,
+  description: "",
   title: null,
   image: null,
   type: null,

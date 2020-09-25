@@ -1,6 +1,8 @@
 import React from "react"
 
-import Img from "gatsby-image"
+// import { useStaticQuery } from "gatsby"
+
+// import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 
@@ -127,7 +129,15 @@ const About = data => {
             data-sal-easing="ease-out-back"
             dat-sal-duration="2000"
           >
-            <Img fluid={data.image.childImageSharp.fluid} />
+            {/* <Img fluid={data.image.childImageSharp.fluid} /> */}
+
+            <div
+              className="my-photo"
+              data-sal="slide-up"
+              data-sal-delay="100"
+              data-sal-easing="ease-out-back"
+              dat-sal-duration="2000"
+            ></div>
           </div>
           <div className="my-identity">
             <h2

@@ -13,6 +13,24 @@ import jiffy from "../data/images/jiffy.jpg"
 const Projects = props => {
   const data = [
     {
+      title: "Take Blaction",
+      description:
+        "A user centric platform which shares a collection of resources for people to take action for the benefit of Black lives. This Progressive Web Application was developed using Gatsby.js, React hooks, and Netlify.",
+
+      url: "https://takeblaction.com",
+      stack: "HTML5, SASS, Javascript ES6, React, Gatsby.js, GraphQL",
+      img: tb,
+    },
+    {
+      title: "Jiffy",
+      description:
+        "Web application that allows the user to search for GIFs using the Giphy API. The core function of this project was to learn about REST APIs, React state, and event handling.",
+
+      url: "https://jiffy-api.netlify.app/",
+      stack: "HTML5, CSS3, Javascript ES6, React, REST APIs",
+      img: jiffy,
+    },
+    {
       title: "Fifty Festival",
       description:
         "Landing page designed for a Music Festival. The purpose of this project was to learn about DOM manipulation and CSS animations. ",
@@ -30,15 +48,7 @@ const Projects = props => {
       stack: "HTML5, CSS3, Javascript ES6",
       img: valencia,
     },
-    {
-      title: "Jiffy",
-      description:
-        "Web application that allows the user to search for GIFs using the Giphy API. The core function of this project was to learn about REST APIs, React state, and event handling.",
 
-      url: "https://jiffy-api.netlify.app/",
-      stack: "HTML5, CSS3, Javascript ES6, React, REST APIs",
-      img: jiffy,
-    },
     {
       title: "My First Web Dev portfolio",
       description:
@@ -46,15 +56,6 @@ const Projects = props => {
       url: "https://leroyclarkejr.com",
       stack: "HTML5, SASS, Javascript ES6, React,",
       img: pv1,
-    },
-    {
-      title: "Take Blaction",
-      description:
-        "A user centric platform which shares a collection of resources for people to take action for the benefit of Black lives. The site is currently live from using Webflow, however the soon to be released PWA is being developed using Gatsby.js, React hooks, and Netlify.",
-
-      url: "https://takeblaction.com",
-      stack: "HTML5, SASS, Javascript ES6, React, Gatsby.js, GraphQL",
-      img: tb,
     },
 
     {

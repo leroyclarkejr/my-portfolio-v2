@@ -174,6 +174,13 @@ div.color-changer .dark {
 
   .image {
     width: 60px;
+    // h1 {
+    //   font-size: 30px;
+    //   font-family: $granary-semi;
+    //   text-decoration: none;
+    //   color: $black;
+    //   border-bottom: none !important;
+    // }
   }
 
   #nav {
@@ -288,12 +295,11 @@ section {
   justify-content: flex-start;
   align-items: center;
   padding-left: 100px;
-  transform: translatey(-100px);
+  // transform: translatey(-100px);
   // background-image: url("../data/images/background.jpg");
   background-color: inherit;
   max-width: none;
   position: relative;
-
   h2 {
     margin-bottom: 50px;
   }
@@ -301,10 +307,13 @@ section {
   h3 {
     max-width: 750px;
   }
+  .hero-copy {
+    transform: translatey(-100px);
+  }
 }
 
 #projects {
-  padding-bottom: 48px;
+  padding: 48px 0;
 
   div.github {
     display: flex;
@@ -422,10 +431,10 @@ div.project-copy .dark {
     }
 
     .my-photo {
-      // background-image: url("../data/images/me.jpeg");
-      // background-size: contain;
-      // background-position: top top;
-      // background-repeat: no-repeat;
+      background-image: url("../data/images/me.jpeg");
+      background-size: contain;
+      background-position: top top;
+      background-repeat: no-repeat;
 
       // height: 100vh;
       border-radius: 5px;
