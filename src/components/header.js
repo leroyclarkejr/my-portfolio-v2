@@ -57,6 +57,7 @@ const Header = () => {
           style={{
             backgroundColor: open ? "#151515" : "#fcfefc",
           }}
+          aria-label="open navigation menu"
         >
           <div
             style={{
@@ -94,7 +95,8 @@ const Header = () => {
             About
           </Link>
           <OutboundLink
-            href="https://personal-things.s3.amazonaws.com/LDCJR-resume.pdf"
+            rel="preconnect"
+            href="https://personal-things.s3.amazonaws.com/LeroyClarkeJrResume.pdf"
             // activeClassName="active"
           >
             Resume
