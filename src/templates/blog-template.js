@@ -82,24 +82,48 @@
 //   )
 // }
 
-// export default BlogPostTemplate
+import React from "react"
+import { graphql } from "gatsby"
 
-// export const pageQuery = graphql`
-//   query BlogPostBySlug($slug: String!) {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     }
-//     markdownRemark(fields: { slug: { eq: $slug } }) {
-//       id
-//       excerpt(pruneLength: 160)
-//       html
-//       frontmatter {
-//         title
-//         date(formatString: "MMMM DD, YYYY")
-//         description
-//       }
-//     }
-//   }
-// `
+//CONTENTFUL
+import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+
+//COMPONENTS
+import Layout from "../components/layout"
+
+const BlogTemplate = ({ data }) => {
+  const firstRichContent = data.allContentfulBlogPost.nodes[0]
+  const options = {
+    renderNode: {
+      [BLOCKS.HEADING_1]: (node, children) => <h1>{children}</h1>,
+    },
+    renderMark: {},
+  }
+  return (
+    <Layout>
+      <section id="blog-post">
+        <h1>{firstRichContent.title}</h1>
+        <h6>{firstRichContent.dateCreated}</h6>
+        {documentToReactComponents(firstRichContent.content.json, options)}
+      </section>
+    </Layout>
+  )
+}
+
+export default BlogTemplate
+
+export const query = graphql`
+  {
+    allContentfulBlogPost {
+      nodes {
+        title
+        dateCreated(formatString: "MM/DD/YYYY")
+        category
+        content {
+          json
+        }
+      }
+    }
+  }
+`

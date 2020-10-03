@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^14.1.1",
     "acorn": "^6.4.1",
     "chroma-js": "^2.1.0",
     "framer-motion": "^2.6.5",
