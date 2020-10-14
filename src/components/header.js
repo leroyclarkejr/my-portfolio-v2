@@ -1,10 +1,11 @@
 import { Link } from "gatsby"
 import React, { useState, useRef } from "react"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
-
 import chroma from "chroma-js"
 
+//COMPONENTS
 import { useOnClickOutside } from "./hooks"
+import Progress from "./progress"
 
 // import logowht from "../data/images/LDCJR-logo.png"
 import logoblk from "../data/images/LDCJR-logo-blk.png"
@@ -37,6 +38,7 @@ const Header = () => {
 
   return (
     <header id="header">
+      <Progress />
       <div className="image">
         <Link to="/">
           <img src={logoblk} alt="LDCJR Logo" />
@@ -93,6 +95,9 @@ const Header = () => {
 
           <Link to="/about/" activeClassName="active">
             About
+          </Link>
+          <Link to="/blog/" activeClassName="active">
+            Blog
           </Link>
           <OutboundLink
             rel="preconnect"

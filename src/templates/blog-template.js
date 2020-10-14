@@ -103,8 +103,8 @@ const BlogTemplate = ({ data }) => {
   return (
     <Layout>
       <section id="blog-post">
-        <h1>{firstRichContent.title}</h1>
-        <h6>{firstRichContent.dateCreated}</h6>
+        <h2>{firstRichContent.title}</h2>
+        <h4>{firstRichContent.dateCreated}</h4>
         {documentToReactComponents(firstRichContent.content.json, options)}
       </section>
     </Layout>

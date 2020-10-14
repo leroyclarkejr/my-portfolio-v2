@@ -83,7 +83,7 @@ function SEO({ description, lang, meta, title, image: metaImage }) {
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
-  description: "",
+  description: null,
   title: null,
   image: null,
   type: null,
@@ -91,10 +91,10 @@ SEO.defaultProps = {
 }
 
 SEO.propTypes = {
+  title: PropTypes.string.isRequired,
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
   image: PropTypes.string,
   type: PropTypes.string,
   url: PropTypes.string,

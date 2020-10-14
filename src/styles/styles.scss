@@ -274,8 +274,6 @@ div.color-changer .dark {
 
 #content {
   width: 100%;
-  // padding: 0 24px;
-  // max-width: 1200px;
   padding-top: 74px;
   margin: 0 auto;
   position: relative;
@@ -286,6 +284,16 @@ div.color-changer .dark {
 section {
   padding: 0 24px;
   max-width: 1200px;
+}
+
+#progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  z-index: 10;
+  background-color: $blue;
 }
 
 #hero {
@@ -488,8 +496,27 @@ div.project-copy .dark {
   }
 }
 
+#all-posts {
+  max-width: 750px;
+  li {
+    padding: 24px;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    P {
+      margin-bottom: 6px;
+    }
+  }
+
+  h4 {
+    font-family: $granary-semi;
+    margin-bottom: 12px;
+  }
+}
+
 #blog-post {
-  padding-top: 74px;
+  max-width: 750px;
 }
 
 footer {

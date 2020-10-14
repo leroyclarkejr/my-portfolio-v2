@@ -21,6 +21,7 @@ exports.createPages = async ({ graphql, actions }) => {
             node {
               title
               category
+              slug
               dateCreated(formatString: "mm/dd/yyyy")
             }
           }
@@ -41,10 +42,10 @@ exports.createPages = async ({ graphql, actions }) => {
     const next = index === 0 ? null : posts[index - 1].node
 
     createPage({
-      path: post.node.title,
+      path: `blog/${post.node.slug}`,
       component: blogPost,
       context: {
-        slug: post.node.title,
+        slug: post.node.slug,
         category: post.node.category,
         previous,
         next,

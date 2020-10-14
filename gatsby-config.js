@@ -9,7 +9,7 @@ module.exports = {
     description: `Leroy Clarke Jr. is a front end developer focused on creating modern, aesthetically pleasing websites for ambitious people & brands.`,
     image: `src/data/images/me.jpeg`,
     url: `https://ldcjr.dev`,
-    twitterUsername: `@ldcjr_`,
+    twitterUsername: `@ldcjr94`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -20,6 +20,7 @@ module.exports = {
     `gatsby-image`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-advanced-sitemap`,
+    `gatsby-plugin-robots-txt`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
