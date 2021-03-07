@@ -4,8 +4,9 @@ import React from "react"
 import Layout from "../components/layout"
 
 import SEO from "../components/seo"
-import Projects from "../components/projects"
 import Hero from "../components/hero"
+import data from "../data/projectdata"
+import Project from "../components/project"
 // import Projects from  "../components/Projects.js"
 
 //styles
@@ -17,9 +18,14 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-
       <Hero />
-      <Projects />
+      <section id="projects">
+        <div className="projects-container">
+          {data.map(data => (
+            <Project {...data} />
+          ))}
+        </div>
+      </section>
     </Layout>
   )
 }

@@ -1,0 +1,20 @@
+@import "./styles.scss";
+
+.my-button {
+  border-radius: 50px;
+  border: 2px solid #000000;
+  padding: 6px 12px;
+  min-width: 24px;
+  font-family: $Sahar-SemiBold;
+  transition: 0.25s all;
+
+  &:hover {
+    background-color: $black;
+    color: $white;
+  }
+}
+
+.secondary {
+  background-color: $white;
+  color: $black;
+}
