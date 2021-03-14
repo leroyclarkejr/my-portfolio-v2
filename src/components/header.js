@@ -1,17 +1,17 @@
 import { Link } from "gatsby"
 import React, { useState, useRef } from "react"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
-import chroma from "chroma-js"
+// import { OutboundLink } from "gatsby-plugin-google-analytics"
+// import chroma from "chroma-js"
 
 //COMPONENTS
 import { useOnClickOutside } from "./hooks"
 // import Progress from "./progress"
 
 // import logowht from "../data/images/LDCJR-logo.png"
-import logoblk from "../data/images/LDCJR-logo-blk.png"
+// import logoblk from "../data/images/LDCJR-logo-blk.png"
 import github from "../data/icons/github.svg"
 import linkedin from "../data/icons/linkedin.svg"
-import paint from "../data/icons/paint6.svg"
+// import paint from "../data/icons/paint6.svg"
 
 import "../styles/header.scss"
 
@@ -102,26 +102,39 @@ const Header = () => {
             </div>
             <div>
               <p>
-                Contact: <a className="mailto"> hello@ldcjr.dev</a>
+                Contact:{" "}
+                <a href="google.com" className="mailto">
+                  {" "}
+                  hello@ldcjr.dev
+                </a>
               </p>
             </div>
             <div className="content">
-              <Link to="https://github.com/ldcjrStudio">
+              <a href="google.com" to="https://github.com/ldcjrStudio">
                 <img src={github} alt="Github Logo" />
                 {/* Github */}
-              </Link>
-              <Link to="https://www.linkedin.com/in/leroy-clarke-jr/">
+              </a>
+              <a
+                href="google.com"
+                to="https://www.linkedin.com/in/leroy-clarke-jr/"
+              >
                 <img src={linkedin} alt="LinkedIn Logo" />
                 {/* LinkedIn */}
-              </Link>
-              <Link to="https://www.linkedin.com/in/leroy-clarke-jr/">
+              </a>
+              <a
+                href="google.com"
+                to="https://www.linkedin.com/in/leroy-clarke-jr/"
+              >
                 <img src={linkedin} alt="LinkedIn Logo" />
                 {/* Instagram */}
-              </Link>
-              <Link to="https://www.linkedin.com/in/leroy-clarke-jr/">
+              </a>
+              <a
+                href="google.com"
+                to="https://www.linkedin.com/in/leroy-clarke-jr/"
+              >
                 <img src={linkedin} alt="LinkedIn Logo" />
                 {/* Facebook */}
-              </Link>
+              </a>
             </div>
           </div>
         </nav>

@@ -14,6 +14,7 @@ const data = [
     url: "https://takeblaction.com",
     stack: "HTML5, SASS, Javascript ES6, React, Gatsby.js, GraphQL",
     img: tb,
+    key: 0,
   },
   {
     title: "Jiffy",
@@ -23,6 +24,7 @@ const data = [
     url: "https://jiffy-api.netlify.app/",
     stack: "HTML5, CSS3, Javascript ES6, React, REST APIs",
     img: jiffy,
+    key: 1,
   },
   {
     title: "Fifty Festival",
@@ -32,6 +34,7 @@ const data = [
     url: "https://ldcjrstudio.github.io/fifty/",
     stack: "HTML5, CSS3, Javascript ES6",
     img: fifty,
+    key: 2,
   },
   {
     title: "Valencia Tennis",
@@ -41,6 +44,7 @@ const data = [
     url: "https://ldcjrstudio.github.io/Valencia-tennis/",
     stack: "HTML5, CSS3, Javascript ES6",
     img: valencia,
+    key: 3,
   },
 
   {
@@ -50,6 +54,7 @@ const data = [
     url: "https://leroyclarkejr.com",
     stack: "HTML5, SASS, Javascript ES6, React,",
     img: pv1,
+    key: 4,
   },
 
   {
@@ -60,6 +65,7 @@ const data = [
     url: "#",
     stack: "HTML5, SASS, Javascript ES6, React, Gatsby.js.",
     img: nt,
+    key: 5,
   },
 ]
 
