@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import MyButton from "./Button"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
@@ -24,7 +24,7 @@ const Hero = () => {
           playsInline
           muted
           data-object-fit="cover"
-          class="my-video"
+          className="my-video"
           width="100%"
           height="auto"
           autoPlay={true}
@@ -38,7 +38,7 @@ const Hero = () => {
         </div>
         <div className="hero-overlay"></div>
         <div className="down-arrow" onClick={() => scrollTo("#projects")}>
-          <img src={down} />
+          <img src={down} alt="down arrow" />
         </div>
         <div
           className="hero-copy"
