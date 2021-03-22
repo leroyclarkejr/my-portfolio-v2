@@ -26,4 +26,33 @@
       margin-right: 12px;
     }
   }
+
+  .my-video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .noise {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+  }
+
+  .down-arrow {
+    position: absolute;
+    bottom: 48px;
+    right: 24px;
+    img {
+      width: 32px;
+      height: auto;
+    }
+  }
 }

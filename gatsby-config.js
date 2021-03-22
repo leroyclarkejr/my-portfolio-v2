@@ -21,6 +21,7 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-advanced-sitemap`,
     `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-smoothscroll`,
     {
       resolve: `gatsby-source-contentful`,
       options: {

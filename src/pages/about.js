@@ -234,7 +234,7 @@ const About = data => {
                   data-sal-delay="100"
                   data-sal-easing="ease-out-back"
                   dat-sal-duration="2000"
-                  key={Math.floor(Math.random() * 100)}
+                  key={skill.key}
                 >
                   {/* <img src={skill.icon} className="icon" /> */}
                   {React.cloneElement(skill.icon, { className: "icon" })}

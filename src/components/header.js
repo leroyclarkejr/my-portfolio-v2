@@ -11,6 +11,7 @@ import { useOnClickOutside } from "./hooks"
 // import logoblk from "../data/images/LDCJR-logo-blk.png"
 import github from "../data/icons/github.svg"
 import linkedin from "../data/icons/linkedin.svg"
+import logo from "../data/images/logo.svg"
 // import paint from "../data/icons/paint6.svg"
 
 import "../styles/header.scss"
