@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "leroyclarkejr-portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Front end developer portfolio",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Leroy Clarke Jr <hello@ldcjr.dev>",
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^14.1.1",
     "@material-ui/core": "^4.11.3",
