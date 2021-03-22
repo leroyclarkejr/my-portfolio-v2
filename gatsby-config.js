@@ -19,8 +19,8 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-image`,
     `gatsby-transformer-remark`,
-    `gatsby-plugin-advanced-sitemap`,
-    `gatsby-plugin-robots-txt`,
+    // `gatsby-plugin-advanced-sitemap`,
+    // `gatsby-plugin-robots-txt`,
     `gatsby-plugin-smoothscroll`,
     {
       resolve: `gatsby-source-contentful`,
