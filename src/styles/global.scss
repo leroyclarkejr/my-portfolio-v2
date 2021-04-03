@@ -1,0 +1,46 @@
+@import "../styles/styles.scss";
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.index-container {
+  max-width: 996px;
+  margin: 0 auto;
+}
+
+.section-heading {
+  widows: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 12px;
+  h3 {
+    font-family: $Sahar-Bold;
+    $white-space: nowrap;
+  }
+}
+
+section {
+  padding: 48px;
+}
+
+#progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 5px;
+  z-index: 10;
+  background-color: $primary;
+}
+#content {
+  width: 100%;
+  // padding-top: 56px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

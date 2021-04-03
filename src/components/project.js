@@ -1,11 +1,13 @@
 import React from "react"
-// import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 import MyButton from "../components/Button"
+
+import "../styles/project.scss"
 
 const Project = ({ img, title, description, stack, features, url, props }) => {
   return (
     <div className="project" key={Math.floor(Math.random() * 100)}>
-      <div className="contnet">
+      <div className="container">
         <div className="image">
           <img src={img} alt={title} />
         </div>
@@ -18,11 +20,11 @@ const Project = ({ img, title, description, stack, features, url, props }) => {
             <li>{stack}</li>
           </ul>
 
-          {/* <OutboundLink href={url} className="url-link">
+          <OutboundLink href={url} className="url-link my-button">
             {url === "#" ? "Coming Soon!" : "See Live"}
-          </OutboundLink> */}
+          </OutboundLink>
 
-          <MyButton to="google.com" title="See live" />
+          {/* <MyButton to="google.com" title="See live" /> */}
         </div>
       </div>
     </div>

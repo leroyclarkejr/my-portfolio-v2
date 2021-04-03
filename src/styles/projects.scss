@@ -1,0 +1,13 @@
+#projects {
+  scroll-margin: 84px 0 0 0;
+
+  h3 {
+    margin-left: 24px;
+  }
+
+  .projects-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+}
