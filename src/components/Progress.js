@@ -28,7 +28,7 @@ const Progress = () => {
         id="progress"
         // style={{ width: `${progress}%` }}
       >
-        {progress}
+        <h4>{progress}%</h4>
       </div>
     </>
   )
