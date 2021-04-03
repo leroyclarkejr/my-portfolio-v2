@@ -19,7 +19,7 @@ const Projects = props => {
     <section id="projects">
       <div className="index-container">
         <div className="section-heading">
-          <h3>My Work</h3>
+          <h3>My Work.</h3>
         </div>
 
         <div className="projects-container">

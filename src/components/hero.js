@@ -48,7 +48,7 @@ const Hero = () => {
         >
           <h1>
             Hi, my name is <Highlight color="blue">Leroy</Highlight> & I'm a
-            Front-end Web Developer
+            Front-end Web Developer.
           </h1>
           <h1
             className="sub"

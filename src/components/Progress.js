@@ -12,17 +12,24 @@ const Progress = () => {
     const pageHeight = bodyTag.getBoundingClientRect().height
     const totalScrollableDistance = pageHeight - window.innerHeight
     const percentage = pixels / totalScrollableDistance
-    setProgress(`${100 * percentage}`)
+    const rounded = Math.round(percentage * 1000) / 10
+    setProgress(`${rounded}`)
   }
 
   useEffect(() => {
     window.addEventListener("scroll", calculateScrollDistance)
+
     return () => window.removeEventListener("scroll", calculateScrollDistance)
   }, [calculateScrollDistance])
 
   return (
     <>
-      <div id="progress" style={{ width: `${progress}%` }}></div>
+      <div
+        id="progress"
+        // style={{ width: `${progress}%` }}
+      >
+        {progress}
+      </div>
     </>
   )
 }
