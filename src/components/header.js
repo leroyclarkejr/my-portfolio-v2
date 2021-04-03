@@ -5,13 +5,18 @@ import React, { useState, useRef } from "react"
 
 //COMPONENTS
 import { useOnClickOutside } from "./hooks"
-// import Progress from "./progress"
+import Progress from "./progress"
 
 // import logowht from "../data/images/LDCJR-logo.png"
 // import logoblk from "../data/images/LDCJR-logo-blk.png"
-import github from "../data/icons/github.svg"
-import linkedin from "../data/icons/linkedin.svg"
 // import paint from "../data/icons/paint6.svg"
+
+import InstagramIcon from "@material-ui/icons/Instagram"
+import FacebookIcon from "@material-ui/icons/Facebook"
+import TwitterIcon from "@material-ui/icons/Twitter"
+import YouTubeIcon from "@material-ui/icons/YouTube"
+import LinkedInIcon from "@material-ui/icons/LinkedIn"
+import GitHubIcon from "@material-ui/icons/GitHub"
 
 import "../styles/header.scss"
 
@@ -23,7 +28,7 @@ const Header = () => {
 
   return (
     <header id="header">
-      {/* <Progress /> */}
+      <Progress />
       <div className="left-icon">
         <Link to="/">{"< Leroy />"}</Link>
       </div>
@@ -83,7 +88,6 @@ const Header = () => {
             <Link to="/" activeClassName="active">
               Work
             </Link>
-
             <Link to="/about/" activeClassName="active">
               About
             </Link>
@@ -93,47 +97,27 @@ const Header = () => {
           </div>
 
           <div className="external-links">
-            <div className="email">
-              <p>Stay in the know </p>
-              <form>
-                <input type="text"></input>
-                <button>Arrow</button>
-              </form>
-            </div>
-            <div>
-              <p>
-                Contact:{" "}
-                <a href="google.com" className="mailto">
-                  {" "}
-                  hello@ldcjr.dev
-                </a>
-              </p>
-            </div>
             <div className="content">
               <a href="google.com" to="https://github.com/ldcjrStudio">
-                <img src={github} alt="Github Logo" />
-                {/* Github */}
+                <GitHubIcon fontSize="large" />
               </a>
               <a
                 href="google.com"
                 to="https://www.linkedin.com/in/leroy-clarke-jr/"
               >
-                <img src={linkedin} alt="LinkedIn Logo" />
-                {/* LinkedIn */}
+                <LinkedInIcon fontSize="large" />
               </a>
               <a
                 href="google.com"
                 to="https://www.linkedin.com/in/leroy-clarke-jr/"
               >
-                <img src={linkedin} alt="LinkedIn Logo" />
-                {/* Instagram */}
+                <InstagramIcon fontSize="large" />
               </a>
               <a
                 href="google.com"
                 to="https://www.linkedin.com/in/leroy-clarke-jr/"
               >
-                <img src={linkedin} alt="LinkedIn Logo" />
-                {/* Facebook */}
+                <FacebookIcon fontSize="large" />
               </a>
             </div>
           </div>

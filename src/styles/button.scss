@@ -1,20 +1,31 @@
+$md: 575px;
 @import "./styles.scss";
 
 .my-button {
   border-radius: 50px;
   border: 2px solid #000000;
-  padding: 6px 12px;
+  padding: 12px 24px;
   min-width: 24px;
-  font-family: $Sahar-SemiBold;
-  transition: 0.25s all;
+  font-family: $Sahar-Bold;
+  transition: 0.25s all ease-in-out;
+  text-decoration: none;
+  color: $white;
+  background-color: $black;
+  color: $white;
+  letter-spacing: 0.05em;
+  font-size: 18px;
 
   &:hover {
-    background-color: $black;
-    color: $white;
+    background-color: $primary;
+    color: $black;
+    transform: scale(1.05);
   }
-}
 
-.secondary {
-  background-color: $white;
-  color: $black;
+  &[variant="secondary"] {
+    background-color: transparent;
+    color: $black;
+    &:hover {
+      background-color: $primary;
+    }
+  }
 }

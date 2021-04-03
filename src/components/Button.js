@@ -3,9 +3,9 @@ import { Link } from "gatsby"
 
 import "../styles/button.scss"
 
-const MyButton = ({ title, to, className }) => {
+const MyButton = ({ title, to, variant }) => {
   return (
-    <Link className="my-button" to={to}>
+    <Link className="my-button" to={to} variant={variant}>
       {title}
     </Link>
   )

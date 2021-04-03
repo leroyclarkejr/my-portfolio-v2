@@ -22,6 +22,7 @@ module.exports = {
     // `gatsby-plugin-advanced-sitemap`,
     // `gatsby-plugin-robots-txt`,
     `gatsby-plugin-smoothscroll`,
+    // `gatsby-transition-link`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -37,7 +38,6 @@ module.exports = {
         path: `${__dirname}/src/data/images`,
       },
     },
-
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

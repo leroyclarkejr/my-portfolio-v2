@@ -47,8 +47,8 @@ const Hero = () => {
           dat-sal-duration="1000"
         >
           <h1>
-            Hi, my name is <Highlight color="blue">Leroy Clarke Jr.</Highlight>{" "}
-            & I'm a Front-end Developer
+            Hi, my name is <Highlight color="blue">Leroy</Highlight> & I'm a
+            Front-end Web Developer
           </h1>
           <h1
             className="sub"
@@ -58,7 +58,7 @@ const Hero = () => {
             dat-sal-duration="2000"
           >
             I build modern, aesthetically pleasing website for ambitious people
-            an brands.
+            and brands.
           </h1>
 
           <div className="cta">
@@ -66,7 +66,7 @@ const Hero = () => {
             <MyButton
               to="google.com"
               title="More about me"
-              className="secondary"
+              variant="secondary"
             />
           </div>
         </div>
