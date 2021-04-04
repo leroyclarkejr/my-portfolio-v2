@@ -10,7 +10,7 @@ const IndexBlog = props => {
     <section id="index-blog">
       <div className="index-container">
         <div className="section-heading">
-          <h3>Blog.</h3>
+          <h3>Recent Blog Posts</h3>
         </div>
 
         <div className="#blog-list">

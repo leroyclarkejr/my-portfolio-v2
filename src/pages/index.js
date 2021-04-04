@@ -1,12 +1,10 @@
-import React from "react"
+import React, { useState } from "react"
 
 //components
 import Layout from "../components/layout"
 
 import SEO from "../components/seo"
 import Hero from "../components/hero"
-import data from "../data/projectdata"
-import Project from "../components/project"
 import Projects from "../components/Projects.js"
 import IndexBlog from "../components/index-blog.js"
 
@@ -18,8 +16,10 @@ import "../styles/global.scss"
 import Progress from "../components/progress"
 
 const IndexPage = () => {
+  const [theme, setTheme] = useState("dark")
+
   return (
-    <Layout>
+    <Layout className={`${theme}`}>
       <SEO title="Home" />
       <Hero />
       <Projects />
