@@ -21,20 +21,11 @@ const Projects = props => {
         <div className="section-heading">
           <h3>My Work.</h3>
         </div>
-
         <div className="projects-container">
           {data.map(data => (
             <Project {...data} />
           ))}
         </div>
-
-        <div
-          className="github"
-          data-sal="slide-up"
-          data-sal-delay="100"
-          data-sal-easing="ease-out-back"
-          dat-sal-duration="2000"
-        ></div>
       </div>
     </section>
   )

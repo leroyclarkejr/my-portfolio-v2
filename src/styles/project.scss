@@ -3,9 +3,18 @@
 .project {
   padding: 0;
   margin: 24px;
-  border: 1px solid $black;
+  border: 2px solid $black;
   //   height: fit-content;
   flex: 0 0 400px;
+  // box-shadow: $black 0px 0px 0px 2px inset, #000000 10px 10px 0px -3px,
+  //   $black 10px 10px;
+  transition: 0.25s all ease-in-out;
+
+  &:hover {
+    box-shadow: $black 0px 0px 0px 1px inset, $secondary 10px 10px 0px -3px,
+      $black 10px 10px;
+    transform: translate(-10px, -10px);
+  }
 
   .image {
     width: 100%;

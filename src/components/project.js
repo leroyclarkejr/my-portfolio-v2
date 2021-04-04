@@ -1,6 +1,5 @@
 import React from "react"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
-import MyButton from "../components/Button"
 
 import "../styles/project.scss"
 

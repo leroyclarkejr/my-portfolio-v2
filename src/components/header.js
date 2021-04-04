@@ -2,10 +2,10 @@ import { Link } from "gatsby"
 import React, { useState, useRef } from "react"
 // import { OutboundLink } from "gatsby-plugin-google-analytics"
 // import chroma from "chroma-js"
+import { motion } from "framer-motion"
 
 //COMPONENTS
 import { useOnClickOutside } from "./hooks"
-import Progress from "./progress"
 
 // import logowht from "../data/images/LDCJR-logo.png"
 // import logoblk from "../data/images/LDCJR-logo-blk.png"
@@ -27,8 +27,7 @@ const Header = () => {
   useOnClickOutside(node, () => setOpen(false))
 
   return (
-    <header id="header">
-      <Progress />
+    <motion.header id="header">
       <div className="left-icon">
         <Link to="/">{"< Leroy />"}</Link>
       </div>
@@ -123,7 +122,7 @@ const Header = () => {
           </div>
         </nav>
       </div>
-    </header>
+    </motion.header>
   )
 }
 

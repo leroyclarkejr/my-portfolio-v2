@@ -3,11 +3,13 @@ import MyButton from "./Button"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
 import noise from "../data/images/noise.png"
-import video from "../data/images/gradient-final.mp4"
+import videoMP4 from "../data/images/gradient-final.mp4"
+import videoWEBM from "../data/images/gradient-final.webm"
 import down from "../data/images/down-arrow.svg"
 
 // import HeroGradient from "../components/glsl/heroGradient"
 import "../styles/hero.scss"
+import poster from "../data/images/gradient-poster.png"
 
 const Highlight = ({ color, children }) => (
   <span className={`relative highlight highlight-${color}`}>
@@ -27,11 +29,14 @@ const Hero = () => {
           className="my-video"
           width="100%"
           height="auto"
+          pre-load="auto"
           autoPlay={true}
           loop
           data-wf-ignore="true"
+          poster={poster}
         >
-          <source src={video} type="video/mp4" data-wf-ignore="true" />
+          <source src={videoMP4} type="video/mp4" data-wf-ignore="true" />
+          <source src={videoWEBM} type="video/webm" data-wf-ignore="true" />
         </video>
         <div className="home-hero-wrapper">
           <img src={noise} alt="noise" className="noise" />
