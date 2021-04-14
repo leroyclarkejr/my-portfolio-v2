@@ -2,7 +2,7 @@ import React, { useEffect, Fragment } from "react"
 
 // import { useStaticQuery } from "gatsby"
 // import { gsap } from "react-gsap"
-import { Controls, PlayState, Tween, Timeline, Reveal } from "react-gsap"
+import { Tween, Timeline, Reveal } from "react-gsap"
 import { gsap } from "gsap/all"
 
 // import Img from "gatsby-image"

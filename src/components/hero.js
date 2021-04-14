@@ -18,11 +18,17 @@ const Highlight = ({ color, children }) => (
 )
 
 const Hero = () => {
-  useEffect(() => {
-    document.addEventListener("keydown", function (event) {
-      console.log(`${event.key} with keycode ${event.keycode}`)
-    })
-  }, [])
+  // useEffect(() => {
+  //   document.addEventListener("keydown", function (event) {
+  //     console.log(`${event.key} with keycode ${event.keycode}`)
+  //   })
+  // }, [])
+
+  function handleKeyPress(event) {
+    if (event.key === "d") {
+      scrollTo("#projects")
+    }
+  }
   return (
     <>
       <div id="gradient"></div>
@@ -34,20 +40,26 @@ const Hero = () => {
           className="my-video"
           width="100%"
           height="auto"
-          pre-load="auto"
+          pre-load="none"
           autoPlay={true}
           loop
           data-wf-ignore="true"
           poster={poster}
         >
-          <source src={videoMP4} type="video/mp4" data-wf-ignore="true" />
-          <source src={videoWEBM} type="video/webm" data-wf-ignore="true" />
+          <source src={videoMP4} type="video/mp4" />
+          <source src={videoWEBM} type="video/webm" />
         </video>
         <div className="home-hero-wrapper">
           <img src={noise} alt="noise" className="noise" />
         </div>
         <div className="hero-overlay"></div>
-        <div className="down-arrow" onClick={() => scrollTo("#projects")}>
+        <div
+          className="down-arrow"
+          onKeyPress={handleKeyPress}
+          onClick={() => scrollTo("#projects")}
+          role="button"
+          tabIndex="0"
+        >
           <img src={down} alt="down arrow" />
         </div>
         <div
