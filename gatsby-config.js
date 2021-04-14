@@ -16,11 +16,13 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-offline`,
     `gatsby-image`,
     `gatsby-transformer-remark`,
-    `gatsby-plugin-advanced-sitemap`,
-    `gatsby-plugin-robots-txt`,
+    // `gatsby-plugin-advanced-sitemap`,
+    // `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-smoothscroll`,
+    `gatsby-plugin-remove-serviceworker`,
+    // `gatsby-transition-link`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -36,7 +38,6 @@ module.exports = {
         path: `${__dirname}/src/data/images`,
       },
     },
-
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

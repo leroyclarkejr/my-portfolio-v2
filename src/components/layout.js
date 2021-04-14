@@ -7,10 +7,11 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+// import $ from "jquery"
 
 import Header from "./header"
 import Footer from "./footer"
-import SEO from "../components/seo"
+// import SEO from "../components/seo"
 
 import "./layout.css"
 
@@ -18,7 +19,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <SEO />
+      {/* <SEO /> */}
 
       <main id="content">{children}</main>
 

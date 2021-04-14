@@ -1,0 +1,60 @@
+@import "./styles.scss";
+
+.blog-post {
+  padding: 0;
+  //   margin: 24px;
+  border: 2px solid $black;
+  height: 300px;
+  max-width: 800px;
+  //   height: fit-content;
+  &:hover {
+    box-shadow: $black 0px 0px 0px 1px inset, $secondary 10px 10px 0px -3px,
+      $black 10px 10px;
+    transform: translate(-10px, -10px);
+  }
+
+  .container {
+    display: flex;
+    flex-flow: row nowrap;
+
+    .image {
+      flex: 0 0 45%;
+      width: 100%;
+      height: 300px;
+
+      background-color: red;
+    }
+
+    .project-copy {
+      padding: 24px 24px 48px;
+      .bottom {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+      }
+    }
+
+    h4,
+    h5 {
+      font-family: $Sahar-Bold;
+      margin-bottom: 6px;
+      // margin-top: 24px;
+    }
+
+    p {
+      font-family: $AllRounderGrotesk;
+      font-size: 18px;
+      margin-bottom: 48px;
+      color: $dark-grey;
+    }
+    ul {
+      margin-bottom: 24px;
+
+      li {
+        font-size: 18px;
+        font-family: $AllRounderGrotesk;
+        color: $dark-grey;
+      }
+    }
+  }
+}

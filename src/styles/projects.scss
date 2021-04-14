@@ -1,0 +1,9 @@
+#projects {
+  scroll-margin: 82px 0 0 0;
+
+  .projects-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+}

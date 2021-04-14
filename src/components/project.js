@@ -1,29 +1,17 @@
 import React from "react"
-import sal from "sal.js"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
+
+import "../styles/project.scss"
 
 const Project = ({ img, title, description, stack, features, url, props }) => {
   return (
-    <div className="project" key={title}>
-      <div>
-        <div
-          className="image"
-          data-sal="slide-up"
-          data-sal-easing="ease-out-back"
-          dat-sal-duration="2000"
-        >
-          <a href={url}>
-            <img src={img} alt={title} />
-          </a>
+    <div className="project" key={Math.floor(Math.random() * 100)}>
+      <div className="container">
+        <div className="image">
+          <img src={img} alt={title} />
         </div>
 
-        <div
-          className="project-copy"
-          data-sal="slide-up"
-          data-sal-delay="200"
-          data-sal-easing="ease-out-back"
-          dat-sal-duration="2000"
-        >
+        <div className="project-copy">
           <h4>{title}</h4>
           <p>{description}</p>
           <h5>Stack</h5>
@@ -31,9 +19,11 @@ const Project = ({ img, title, description, stack, features, url, props }) => {
             <li>{stack}</li>
           </ul>
 
-          <OutboundLink href={url} className="url-link">
+          <OutboundLink href={url} className="url-link my-button">
             {url === "#" ? "Coming Soon!" : "See Live"}
           </OutboundLink>
+
+          {/* <MyButton to="google.com" title="See live" /> */}
         </div>
       </div>
     </div>
