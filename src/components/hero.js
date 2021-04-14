@@ -18,6 +18,11 @@ const Highlight = ({ color, children }) => (
 )
 
 const Hero = () => {
+  useEffect(() => {
+    document.addEventListener("keydown", function (event) {
+      console.log(`${event.key} with keycode ${event.keycode}`)
+    })
+  }, [])
   return (
     <>
       <div id="gradient"></div>
