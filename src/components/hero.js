@@ -67,12 +67,12 @@ const Hero = () => {
           </h1>
 
           <div className="cta">
-            <MyButton to="google.com" title="View work" />
             <MyButton
-              to="google.com"
-              title="More about me"
-              variant="secondary"
+              to="#projects"
+              title="View work"
+              onClick={() => scrollTo("#projects")}
             />
+            <MyButton to="/about" title="More about me" variant="secondary" />
           </div>
         </div>
       </section>

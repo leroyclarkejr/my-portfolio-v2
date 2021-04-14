@@ -1,12 +1,16 @@
-// $Headerfont
-// $Bodyfont
+@import "./fonts.css";
 
-// $xl
-$lg: 768px;
-// $md
-// $sm
-$md: 575px;
+$xl: 1250px;
+$lg: 996px;
+$md: 768px;
+$sm: 575px;
+$xs: 480px;
 
+$Sahar-Bold: "Sahar-Bold", sans-serif;
+$Sahar-SemiBold: "Sahar-SemiBold", sans-serif;
+$AllRounderGrotesk: "AllRounderGrotesk", sans-serif;
+
+// COLORS
 $black: #151515;
 $dark-grey: #646464;
 $med-grey: #c2c2c2;
@@ -14,8 +18,3 @@ $light-grey: #eeeeee;
 $primary: #0066f5;
 $secondary: #0ae0eb;
 $white: #fcfefc;
-// $main
-// $accent
-// $dark-grey
-// $md-grey
-// $light-grey

@@ -3,12 +3,12 @@ import React from "react"
 import Project from "./project.js"
 
 //PHOTOS
-import fifty from "../data/images/fifty.jpg"
-import valencia from "../data/images/valencia.jpg"
-import pv1 from "../data/images/pv1.jpg"
-import tb from "../data/images/tb.jpg"
-import nt from "../data/images/nt.jpg"
-import jiffy from "../data/images/jiffy.jpg"
+// import fifty from "../data/images/fifty.jpg"
+// import valencia from "../data/images/valencia.jpg"
+// import pv1 from "../data/images/pv1.jpg"
+// import tb from "../data/images/tb.jpg"
+// import nt from "../data/images/nt.jpg"
+// import jiffy from "../data/images/jiffy.jpg"
 
 import data from "../data/projectdata"
 

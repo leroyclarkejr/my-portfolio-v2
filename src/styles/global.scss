@@ -1,12 +1,17 @@
 @import "../styles/styles.scss";
 .container {
-  max-width: 1250px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
 .index-container {
   max-width: 996px;
   margin: 0 auto;
+  padding: 0 24px;
+
+  @media screen and (max-width: $xs) {
+    padding: 0 12px;
+  }
 }
 
 .section-heading {
@@ -24,7 +29,7 @@
 }
 
 section {
-  padding: 48px;
+  padding: 48px 0;
 }
 
 #progress {

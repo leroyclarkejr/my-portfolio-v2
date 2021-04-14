@@ -13,8 +13,7 @@ import { useOnClickOutside } from "./hooks"
 
 import InstagramIcon from "@material-ui/icons/Instagram"
 import FacebookIcon from "@material-ui/icons/Facebook"
-import TwitterIcon from "@material-ui/icons/Twitter"
-import YouTubeIcon from "@material-ui/icons/YouTube"
+
 import LinkedInIcon from "@material-ui/icons/LinkedIn"
 import GitHubIcon from "@material-ui/icons/GitHub"
 
@@ -90,9 +89,9 @@ const Header = () => {
             <Link to="/about/" activeClassName="active">
               About
             </Link>
-            <Link to="/blog/" activeClassName="active">
+            {/* <Link to="/blog/" activeClassName="active">
               Blog
-            </Link>
+            </Link> */}
           </div>
 
           <div className="external-links">

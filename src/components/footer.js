@@ -2,14 +2,9 @@ import React from "react"
 import { Link } from "gatsby"
 // import { OutboundLink } from "gatsby-plugin-google-analytics"
 
-import logowht from "../data/images/LDCJR-logo.png"
-import github from "../data/icons/github.svg"
-import linkedin from "../data/icons/linkedin.svg"
-
 import InstagramIcon from "@material-ui/icons/Instagram"
 import FacebookIcon from "@material-ui/icons/Facebook"
-import TwitterIcon from "@material-ui/icons/Twitter"
-import YouTubeIcon from "@material-ui/icons/YouTube"
+
 import LinkedInIcon from "@material-ui/icons/LinkedIn"
 import GitHubIcon from "@material-ui/icons/GitHub"
 

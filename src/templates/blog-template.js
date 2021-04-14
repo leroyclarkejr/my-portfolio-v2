@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 import "../styles/blog.scss"
 
 //CONTENTFUL
-import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types"
+import { BLOCKS, MARKS } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 //COMPONENTS

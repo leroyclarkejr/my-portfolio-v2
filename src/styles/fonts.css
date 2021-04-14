@@ -1,5 +1,36 @@
 @font-face {
-  font-family: "";
-  src: url("../data/granary-semi-bold.woff2") format("woff2"),
-    url("../data/granary-semi-bold.woff") format("woff");
+  font-family: "Sahar-Bold";
+  src: url("../data//fonts/sahar-bold.woff2") format("woff2"),
+    url("../data//fonts/sahar-bold.woff") format("woff"),
+    url("../data//fonts/sahar-bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Sahar-Bold-Italic";
+  src: url("../data//fonts/sahar-bold-italic.woff2") format("woff2"),
+    url("../data//fonts/sahar-bold-italic.woff") format("woff"),
+    url("../data//fonts/sahar-bold-italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sahar-SemiBold";
+  src: url("../data//fonts/sahar-semibold.woff2") format("woff2"),
+    url("../data//fonts/sahar-semibold.woff") format("woff"),
+    url("../data//fonts/sahar-semibold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Sahar-SemiBold-Italic";
+  src: url("../data//fonts/sahar-semibold-italic.woff2") format("woff2"),
+    url("../data//fonts/sahar-semibold-italic.woff") format("woff"),
+    url("../data//fonts/sahar-semibold-italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "AllRounderGrotesk";
+  src: url("../data//fonts/AllrounderGrotesk-Regular.woff2") format("woff2"),
+    url("../data//fonts/AllrounderGrotesk-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "AllRounderGroteskItalic";
+  src: url("../data//fonts/AllrounderGrotesk-RegularItalic.woff2")
+      format("woff2"),
+    url("../data//fonts/AllrounderGrotesk-RegularItalic.woff") format("woff");
 }
