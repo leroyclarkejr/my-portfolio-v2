@@ -14,24 +14,27 @@ const Footer = () => {
       <div className="footer-copy">
         <div className="external-links">
           <div className="content">
-            <a href="google.com" to="https://github.com/ldcjrStudio">
+            <a
+              href="https://github.com/ldcjrStudio"
+              to="https://github.com/ldcjrStudio"
+            >
               <GitHubIcon fontSize="large" />
             </a>
             <a
-              href="google.com"
+              href="https://www.linkedin.com/in/leroy-clarke-jr/"
               to="https://www.linkedin.com/in/leroy-clarke-jr/"
             >
               <LinkedInIcon fontSize="large" />
             </a>
             <a
-              href="google.com"
-              to="https://www.linkedin.com/in/leroy-clarke-jr/"
+              href="https://www.linkedin.com/in/leroy-clarke-jr"
+              to="https://www.instagram.com/leroyclarkejr"
             >
               <InstagramIcon fontSize="large" />
             </a>
             <a
-              href="google.com"
-              to="https://www.linkedin.com/in/leroy-clarke-jr/"
+              href="ttps://www.linkedin.com/in/leroy-clarke-jr/"
+              to="https://www.facebook.com/leroyclarkejr"
             >
               <FacebookIcon fontSize="large" />
             </a>
