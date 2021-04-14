@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 
 import SEO from "../components/seo"
 import Hero from "../components/hero"
-import Projects from "../components/Projects.js"
+import Projects from "../components/projects.js"
 // import IndexBlog from "../components/index-blog.js"
 
 //styles
