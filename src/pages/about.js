@@ -2,7 +2,7 @@ import React, { useEffect, Fragment } from "react"
 
 // import { useStaticQuery } from "gatsby"
 // import { gsap } from "react-gsap"
-import { Tween, Timeline, Reveal } from "react-gsap"
+import { Tween, Timeline } from "react-gsap"
 import { gsap } from "gsap/all"
 
 // import Img from "gatsby-image"
@@ -71,7 +71,7 @@ const About = data => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 128 128"
-          enable-background="new 0 0 128 128"
+          enableBackground="new 0 0 128 128"
         >
           <g fill="#61DAFB">
             <circle cx="64" cy="64" r="11.4" />
@@ -217,11 +217,9 @@ const About = data => {
     const slides = document.querySelectorAll(".img-container .slides")
 
     slides.forEach(slide => {
-      console.log("slidess")
       let current = 0
       let z = 1000000000
       const images = slide.querySelectorAll("img")
-      console.log(images)
 
       images.forEach(image => {
         z = z - 1
@@ -282,90 +280,91 @@ const About = data => {
           <div className="img-container">
             <div className="slides">
               {/* <Controls playState={PlayState.stop}> */}
-              <Reveal>
-                <Timeline
-                  target={
-                    <Fragment>
-                      <img src={me} alt="me" className="slide" />
-                      <img src={me2} alt="me" className="slide" />
-                      <img src={me3} alt="me" className="slide" />
-                    </Fragment>
-                  }
-                >
-                  <Tween
-                    from={{
-                      x: () => {
-                        return 500 * Math.random() - 250
-                      },
-                      y: "500%",
-                      rotation: () => {
-                        return 90 * Math.random() - 45
-                      },
-                      opacity: 1,
-                    }}
-                    to={{ x: 0, y: 0 }}
-                    duration={0.5}
-                    target={0}
-                  />
-                  <Tween
-                    from={{
-                      x: () => {
-                        return 500 * Math.random() - 250
-                      },
-                      y: "500%",
-                      rotation: () => {
-                        return 90 * Math.random() - 45
-                      },
-                      opacity: 1,
-                    }}
-                    to={{ x: 0, y: 0, stagger: -0.25 }}
-                    duration={0.5}
-                    target={1}
-                  />
-                  <Tween
-                    from={{
-                      x: () => {
-                        return 500 * Math.random() - 250
-                      },
-                      y: "500%",
-                      rotation: () => {
-                        return 90 * Math.random() - 45
-                      },
-                      opacity: 1,
-                    }}
-                    to={{ x: 0, y: 0 }}
-                    duration={0.5}
-                    target={2}
-                  />
-                  <Tween
-                    to={{
-                      rotation: () => {
-                        return 16 * Math.random() - 8
-                      },
-                    }}
-                    target={0}
-                    duration={0.5}
-                  />
-                  <Tween
-                    to={{
-                      rotation: () => {
-                        return 16 * Math.random() - 8
-                      },
-                    }}
-                    target={1}
-                    duration={0.5}
-                  />
-                  <Tween
-                    to={{
-                      rotation: () => {
-                        return 16 * Math.random() - 8
-                      },
-                    }}
-                    target={2}
-                    duration={0.5}
-                  />
-                </Timeline>
-              </Reveal>
+
+              <Timeline
+                target={
+                  <Fragment>
+                    <img src={me} alt="me" className="slide" />
+                    <img src={me2} alt="me" className="slide" />
+                    <img src={me3} alt="me" className="slide" />
+                  </Fragment>
+                }
+              >
+                <Tween from={{ opacity: 0 }} duration={0.75} />
+                <Tween
+                  from={{
+                    x: () => {
+                      return 500 * Math.random() - 250
+                    },
+                    y: "500%",
+                    rotation: () => {
+                      return 90 * Math.random() - 45
+                    },
+                    opacity: 1,
+                  }}
+                  to={{ x: 0, y: 0 }}
+                  duration={1}
+                  target={0}
+                />
+                <Tween
+                  from={{
+                    x: () => {
+                      return 500 * Math.random() - 250
+                    },
+                    y: "500%",
+                    rotation: () => {
+                      return 90 * Math.random() - 45
+                    },
+                    opacity: 1,
+                  }}
+                  to={{ x: 0, y: 0, stagger: -0.25 }}
+                  duration={0.5}
+                  target={1}
+                />
+                <Tween
+                  from={{
+                    x: () => {
+                      return 500 * Math.random() - 250
+                    },
+                    y: "500%",
+                    rotation: () => {
+                      return 90 * Math.random() - 45
+                    },
+                    opacity: 1,
+                  }}
+                  to={{ x: 0, y: 0 }}
+                  duration={0.5}
+                  target={2}
+                />
+                <Tween
+                  to={{
+                    rotation: () => {
+                      return 16 * Math.random() - 8
+                    },
+                  }}
+                  target={0}
+                  duration={0.5}
+                />
+                <Tween
+                  to={{
+                    rotation: () => {
+                      return 16 * Math.random() - 8
+                    },
+                  }}
+                  target={1}
+                  duration={0.5}
+                />
+                <Tween
+                  to={{
+                    rotation: () => {
+                      return 16 * Math.random() - 8
+                    },
+                  }}
+                  target={2}
+                  duration={0.5}
+                />
+              </Timeline>
+
               {/* </Controls> */}
             </div>
           </div>
