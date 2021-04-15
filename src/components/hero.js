@@ -29,6 +29,10 @@ const Hero = () => {
       scrollTo("#projects")
     }
   }
+
+  function handleProjectScroll() {
+    scrollTo("#projects")
+  }
   return (
     <>
       <div id="gradient"></div>
@@ -62,34 +66,26 @@ const Hero = () => {
         >
           <img src={down} alt="down arrow" />
         </div>
-        <div
-          className="hero-copy"
-          data-sal="slide-up"
-          data-sal-easing="ease-out-bounce"
-          dat-sal-duration="1000"
-        >
-          <h1>
-            Hi, my name is <Highlight color="blue">Leroy</Highlight> & I'm a
-            Front-end Web Developer.
-          </h1>
-          <h1
-            className="sub"
-            data-sal="slide-up"
-            data-sal-delay="300"
-            data-sal-easing="ease-out-bounce"
-            dat-sal-duration="2000"
-          >
-            I build modern, aesthetically pleasing website for ambitious people
-            and brands.
-          </h1>
 
-          <div className="cta">
-            <MyButton
-              to="#projects"
-              title="View work"
-              onClick={() => scrollTo("#projects")}
-            />
-            <MyButton to="/about" title="More about me" variant="secondary" />
+        <div className="container">
+          <div className="hero-copy">
+            <h1>
+              Hi, my name is <Highlight color="blue">Leroy</Highlight> & I'm a
+              Front-end Web Developer.
+            </h1>
+            <h1 className="sub">
+              I build modern, aesthetically pleasing websites for ambitious
+              people and brands.
+            </h1>
+
+            <div className="cta">
+              <MyButton
+                to="#projects"
+                title="View work"
+                onClick={handleProjectScroll}
+              />
+              <MyButton to="/about" title="More about me" variant="secondary" />
+            </div>
           </div>
         </div>
       </section>

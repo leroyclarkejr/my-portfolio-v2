@@ -46,6 +46,10 @@
     font-size: 18px;
     margin-bottom: 48px;
     color: $dark-grey;
+
+    @media screen and (max-width: $sm) {
+      margin-bottom: 24px;
+    }
   }
   ul {
     margin-bottom: 24px;

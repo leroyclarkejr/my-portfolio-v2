@@ -5,13 +5,9 @@
 }
 
 .index-container {
-  max-width: 996px;
+  // max-width: 996px;
   margin: 0 auto;
-  padding: 0 24px;
-
-  @media screen and (max-width: $xs) {
-    padding: 0 12px;
-  }
+  padding: 0;
 }
 
 .section-heading {
@@ -20,16 +16,28 @@
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
+
   h3 {
     font-family: $Sahar-Bold;
     $white-space: nowrap;
-    // border-bottom: 3px solid $black;
+    max-width: 500px;
+    text-align: center;
+    span {
+      font-family: $Sahar-SemiBold;
+    }
+  }
+
+  @media screen and (max-width: $sm) {
+    justify-content: flex-start;
+    h3 {
+      text-align: left;
+    }
   }
 }
 
 section {
-  padding: 48px 0;
+  padding: 48px 24px;
 }
 
 #progress {

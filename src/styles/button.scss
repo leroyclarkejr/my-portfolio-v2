@@ -17,6 +17,10 @@ $md: 575px;
   font-size: 18px;
   position: relative;
   vertical-align: middle;
+
+  @media screen and (max-width: $md) {
+    font-size: 16px;
+  }
   &:after {
     content: url("../data//images/right-arrow.svg");
     position: absolute;
