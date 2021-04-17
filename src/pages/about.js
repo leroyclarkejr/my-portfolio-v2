@@ -290,7 +290,7 @@ const About = data => {
                   </Fragment>
                 }
               >
-                <Tween from={{ opacity: 0 }} duration={0.75} />
+                <Tween from={{ opacity: 0 }} duration={0.5} />
                 <Tween
                   from={{
                     x: () => {
@@ -387,9 +387,8 @@ const About = data => {
               </p>
               <p>
                 It has become my purpose to use my coding skillset along with my
-                knowledge in Branding, & UI Design, Search Engine Optimization &
-                Google Analytics to help others maximize their potential in the
-                digital world. Feel free to{" "}
+                knowledge in Brand Strategy, UI design, SEO & Google Analytics
+                to help others maximize their potential in the digital world.
                 <span>
                   <a>
                     <strong></strong>email me
@@ -400,7 +399,7 @@ const About = data => {
 
               <p>
                 Aside from web development, my interests include fitness, music,
-                personal finance, & entreprenuership. ✌🏾
+                personal finance, & entreprenuership. <span role="img">✌🏾</span>
               </p>
             </div>
           </div>

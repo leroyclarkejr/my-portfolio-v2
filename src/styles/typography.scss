@@ -1,5 +1,19 @@
 @import "./variables.scss";
 
+a.link {
+  text-decoration: none;
+  color: $primary;
+
+  &:hover,
+  &:active {
+    color: $secondary;
+  }
+
+  &:visited {
+    color: $primary;
+  }
+}
+
 h1 {
   font-size: 40px;
   font-family: $Sahar-Bold;
@@ -80,5 +94,11 @@ p {
     &.sub {
       font-size: 24px;
     }
+  }
+  h6 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 18px;
   }
 }

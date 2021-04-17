@@ -11,6 +11,15 @@ import GitHubIcon from "@material-ui/icons/GitHub"
 const Footer = () => {
   return (
     <footer>
+      <div className="contact">
+        <h6>
+          Feel free to contact me if you're looking for a developer, have any
+          questions, or just want to connect. Email me at{" "}
+          <a className="link" href="mailto:lclarkejr94@gmail.com">
+            lclarkejr94@gmail.com
+          </a>
+        </h6>
+      </div>
       <div className="footer-copy">
         <div className="external-links">
           <div className="content">
@@ -43,9 +52,9 @@ const Footer = () => {
       </div>
 
       <div className="footer-bar">
-        <Link to="/about">
-          Designed & Developed by <span>Leroy</span>
-        </Link>
+        <p>
+          Designed & Developed by <Link to="/about">Leroy</Link>
+        </p>
       </div>
     </footer>
   )

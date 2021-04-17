@@ -201,6 +201,20 @@ footer {
   color: $white;
   z-index: 1;
   position: relative;
+  span {
+    color: $primary;
+  }
+
+  .contact {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 24px;
+    h6 {
+      max-width: 600px;
+      text-align: center;
+    }
+  }
 
   .footer-copy {
     color: $white;
@@ -246,17 +260,13 @@ footer {
     justify-content: center;
     color: $white;
     padding-bottom: 5px;
-
-    font-size: 12px;
+    p {
+      font-size: 12px;
+    }
     a {
       text-decoration: none;
-      color: $white;
       // border-bottom: 1px $white solid;
       font-family: $Sahar-Bold;
-
-      span {
-        color: $primary;
-      }
     }
   }
 }
