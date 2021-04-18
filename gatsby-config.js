@@ -21,6 +21,7 @@ module.exports = {
     // `gatsby-plugin-advanced-sitemap`,
     // `gatsby-plugin-robots-txt`,
     `gatsby-plugin-smoothscroll`,
+    `gatsby-remark-video-poster`,
     `gatsby-plugin-remove-serviceworker`,
     // `gatsby-transition-link`,
     {

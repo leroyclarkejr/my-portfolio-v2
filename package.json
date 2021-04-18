@@ -24,6 +24,7 @@
     "gatsby-plugin-sharp": "^2.14.3",
     "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-react-router-scroll": "^3.0.12",
+    "gatsby-remark-video-poster": "^0.0.1-alpha.1",
     "gatsby-source-contentful": "^2.3.46",
     "gatsby-source-filesystem": "^2.3.25",
     "gatsby-transformer-remark": "^2.16.1",

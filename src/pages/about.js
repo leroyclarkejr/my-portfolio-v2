@@ -399,7 +399,10 @@ const About = data => {
 
               <p>
                 Aside from web development, my interests include fitness, music,
-                personal finance, & entreprenuership. <span role="img">✌🏾</span>
+                personal finance, & entreprenuership.{" "}
+                <span role="img" aria-label="Peace Emoji">
+                  ✌🏾
+                </span>
               </p>
             </div>
           </div>

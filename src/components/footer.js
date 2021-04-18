@@ -53,7 +53,10 @@ const Footer = () => {
 
       <div className="footer-bar">
         <p>
-          Designed & Developed by <Link to="/about">Leroy</Link>
+          Designed & Developed by{" "}
+          <Link className="link" to="/about">
+            Leroy
+          </Link>
         </p>
       </div>
     </footer>
