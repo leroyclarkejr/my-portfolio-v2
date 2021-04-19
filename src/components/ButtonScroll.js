@@ -1,20 +1,24 @@
 import React from "react"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
-import { Link } from "gatsby"
-
 import "../styles/button.scss"
 
-const MyButtonScroll = ({ title, variant, to }) => {
+const MyButtonScroll = ({ title, variant }) => {
+  function handleKeyPress(event) {
+    if (event.key === "d") {
+      scrollTo("#my-work")
+    }
+  }
   return (
     <div
       className="my-button"
-      // to={to}
       onClick={() => {
-        // e.preventDefault()
-        scrollTo("#down-btn")
+        scrollTo("#my-work")
       }}
       variant={variant}
+      role="button"
+      tabIndex="0"
+      onKeyPress={handleKeyPress}
     >
       {title}
     </div>

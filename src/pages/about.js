@@ -2,7 +2,7 @@ import React, { useEffect, Fragment } from "react"
 
 // import { useStaticQuery } from "gatsby"
 // import { gsap } from "react-gsap"
-import { Tween, Timeline } from "react-gsap"
+import { Tween, Timeline, Reveal } from "react-gsap"
 import { gsap } from "gsap/all"
 
 // import Img from "gatsby-image"
@@ -222,13 +222,13 @@ const About = data => {
       const images = slide.querySelectorAll("img")
 
       images.forEach(image => {
-        z = z - 1
+        z = z + 1
 
         image.style.zIndex = z
       })
 
       slide.addEventListener("click", function () {
-        z = z - 1
+        z = z + 1
 
         let direction = "150%"
         let midAngle = 15
@@ -303,7 +303,7 @@ const About = data => {
                     opacity: 1,
                   }}
                   to={{ x: 0, y: 0 }}
-                  duration={1}
+                  duration={0.5}
                   target={0}
                 />
                 <Tween
@@ -371,39 +371,44 @@ const About = data => {
 
           <div className="my-identity">
             <div className="content">
-              <h1>
-                Former pro gymnast, Penn State Graduate, Creative problem
-                solver.
-              </h1>
-              <p>
-                I'm Leroy - A self taught Front-end Web Developer living in New
-                Jersey.
-              </p>
-              <p>
-                I ultimately decided to learn to code because of my love for
-                technology and appreciation for digital multimedia art. I see
-                front-end web development as my opportunity to unleash my
-                creativity while also challenging myself technically.
-              </p>
-              <p>
-                It has become my purpose to use my coding skillset along with my
-                knowledge in Brand Strategy, UI design, SEO & Google Analytics
-                to help others maximize their potential in the digital world.
-                {/* <span>
-                  <a>
-                    <strong></strong>email me
-                  </a>{" "}
-                  if you're interested in any of these services.
-                </span> */}
-              </p>
+              <Reveal>
+                <Tween
+                  from={{ opacity: 0 }}
+                  to={{ opacity: 1 }}
+                  duration={0.5}
+                  stagger={0.2}
+                  delay={0.5}
+                >
+                  <h1>
+                    Former pro gymnast, Penn State Graduate, Creative problem
+                    solver.
+                  </h1>
+                  <p>
+                    I'm Leroy - A self taught Front-end Web Developer living in
+                    New Jersey.
+                  </p>
+                  <p>
+                    I ultimately decided to learn to code because of my love for
+                    technology and appreciation for digital multimedia art. I
+                    see front-end web development as my opportunity to unleash
+                    my creativity while also challenging myself technically.
+                  </p>
+                  <p>
+                    It has become my purpose to use my coding skillset along
+                    with my knowledge in Brand Strategy, UI design, SEO & Google
+                    Analytics to help others maximize their potential in the
+                    digital world.
+                  </p>
 
-              <p>
-                Aside from web development, my interests include fitness, music,
-                personal finance, & entreprenuership.{" "}
-                <span role="img" aria-label="Peace Emoji">
-                  ✌🏾
-                </span>
-              </p>
+                  <p>
+                    Aside from web development, my interests include fitness,
+                    music, personal finance, & entreprenuership.{" "}
+                    <span role="img" aria-label="Peace Emoji">
+                      ✌🏾
+                    </span>
+                  </p>
+                </Tween>
+              </Reveal>
             </div>
           </div>
         </div>
@@ -411,26 +416,35 @@ const About = data => {
 
       <section id="skills">
         <div className="section-heading">
-          <h3
-            data-sal="slide-up"
-            data-sal-delay="100"
-            data-sal-easing="ease-out-back"
-            dat-sal-duration="2000"
-          >
-            My Stack: <span>Coding Tools & Technologies I am competent in</span>
-          </h3>
+          <Reveal>
+            <Tween from={{ opacity: 0 }} to={{ opacity: 1 }} duration={0.5}>
+              <h3>
+                My Stack:{" "}
+                <span>Coding Tools & Technologies I am competent in</span>
+              </h3>
+            </Tween>
+          </Reveal>
         </div>
 
         <div className="skills-container">
           <ul>
-            {skills.map(skill => {
-              return (
-                <li key={skill.key}>
-                  {React.cloneElement(skill.icon, { className: "icon" })}
-                  <h6>{skill.name}</h6>
-                </li>
-              )
-            })}
+            <Reveal>
+              <Tween
+                from={{ opacity: 0 }}
+                to={{ opacity: 1 }}
+                stagger={0.1}
+                duration={0.5}
+              >
+                {skills.map(skill => {
+                  return (
+                    <li key={skill.key}>
+                      {React.cloneElement(skill.icon, { className: "icon" })}
+                      <h6>{skill.name}</h6>
+                    </li>
+                  )
+                })}
+              </Tween>
+            </Reveal>
           </ul>
         </div>
       </section>

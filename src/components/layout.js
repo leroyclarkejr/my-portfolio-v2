@@ -12,10 +12,23 @@ import PropTypes from "prop-types"
 import Header from "./header"
 import Footer from "./footer"
 // import SEO from "../components/seo"
+// import { gsap } from "gsap/all"
 
 import "./layout.css"
 
 const Layout = ({ children }) => {
+  // useEffect(() => {
+  //   headerFadeIn()
+  // }, [])
+
+  // const headerFadeIn = () => {
+  //   const header = document.querySelector("#header")
+
+  //   const headerTimeline = gsap.timeline()
+  //   headerTimeline
+  //     .set(header, { opacity: 0, y: "-66px", duration: 1 })
+  //     .to(header, { opacity: 1, y: 0, duration: 1, delay: 1 })
+  // }
   return (
     <>
       <Header />

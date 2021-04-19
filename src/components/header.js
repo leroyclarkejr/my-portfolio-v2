@@ -2,10 +2,13 @@ import { Link } from "gatsby"
 import React, { useState, useRef } from "react"
 // import { OutboundLink } from "gatsby-plugin-google-analytics"
 // import chroma from "chroma-js"
-import { motion } from "framer-motion"
+// import { motion } from "framer-motion"
+// import { Tween, Timeline, Reveal } from "react-gsap"
+import { gsap } from "gsap/all"
 
 //COMPONENTS
 import { useOnClickOutside } from "./hooks"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 // import logowht from "../data/images/LDCJR-logo.png"
 // import logoblk from "../data/images/LDCJR-logo-blk.png"
@@ -21,12 +24,25 @@ import "../styles/header.scss"
 
 const Header = () => {
   const [open, setOpen] = useState(false)
-
   const node = useRef()
   useOnClickOutside(node, () => setOpen(false))
 
+  const handleNavOpen = () => {
+    const navMenuItems = document.querySelectorAll("nav a")
+    setOpen(!open)
+    if (open === false) {
+      const menuAppear = gsap.timeline()
+      menuAppear.set(navMenuItems, { opacity: 0 }).to(navMenuItems, {
+        opacity: 1,
+        duration: 0.25,
+        delay: 0.7,
+        stagger: 0.1,
+      })
+    }
+  }
+
   return (
-    <motion.header id="header">
+    <header id="header">
       <div className="left-icon">
         <Link to="/">{"< Leroy />"}</Link>
       </div>
@@ -35,7 +51,7 @@ const Header = () => {
         <button
           className="nav-button"
           open={open}
-          onClick={() => setOpen(!open)}
+          onClick={handleNavOpen}
           aria-label="open navigation menu"
         >
           <div
@@ -73,7 +89,7 @@ const Header = () => {
         ></nav>
 
         <nav
-          className="nav-menu"
+          className="nav-menu main-nav-menu "
           open={open}
           // style={{ transform: open ? "translatey(0)" : "translatey(-100%)" }}
           style={{
@@ -96,40 +112,40 @@ const Header = () => {
 
           <div className="external-links">
             <div className="content">
-              <a
+              <OutboundLink
                 target="_blank"
                 href="https://www.instagram.com/leroyclarkejr"
                 to="https://www.instagram.com/leroyclarkejr"
               >
                 <InstagramIcon fontSize="large" />
-              </a>
-              <a
+              </OutboundLink>
+              <OutboundLink
                 target="_blank"
                 href="https://github.com/ldcjrStudio"
                 to="https://github.com/ldcjrStudio"
               >
                 <GitHubIcon fontSize="large" />
-              </a>
-              <a
+              </OutboundLink>
+              <OutboundLink
                 target="_blank"
                 href="https://www.linkedin.com/in/leroy-clarke-jr/"
                 to="https://www.linkedin.com/in/leroy-clarke-jr/"
               >
                 <LinkedInIcon fontSize="large" />
-              </a>
+              </OutboundLink>
 
-              <a
+              <OutboundLink
                 target="_blank"
                 href="https://www.facebook.com/leroyclarkejr"
                 to="https://www.facebook.com/leroyclarkejr"
               >
                 <FacebookIcon fontSize="large" />
-              </a>
+              </OutboundLink>
             </div>
           </div>
         </nav>
       </div>
-    </motion.header>
+    </header>
   )
 }
 

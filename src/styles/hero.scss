@@ -3,6 +3,7 @@
 #hero {
   height: 100vh;
   width: 100%;
+  min-height: -webkit-fill-available;
   // display: flex;
   // justify-content: flex-start;
   // align-items: center;
@@ -101,6 +102,9 @@
 
     &:hover {
       transform: scale(1.2);
+    }
+    &:focus {
+      outline: none;
     }
   }
 }

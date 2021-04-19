@@ -7,6 +7,7 @@ import noise from "../data/images/noise.png"
 import videoMP4 from "../data/images/gradient-final.mp4"
 import videoWEBM from "../data/images/gradient-final.webm"
 import down from "../data/images/down-arrow.svg"
+import { Tween, Reveal } from "react-gsap"
 
 // import HeroGradient from "../components/glsl/heroGradient"
 import "../styles/hero.scss"
@@ -27,13 +28,10 @@ const Hero = () => {
 
   function handleKeyPress(event) {
     if (event.key === "d") {
-      scrollTo("#projects")
+      scrollTo("#my-work")
     }
   }
 
-  function handleProjectScroll() {
-    scrollTo("#projects")
-  }
   return (
     <>
       <div id="gradient"></div>
@@ -61,33 +59,47 @@ const Hero = () => {
         <div
           className="down-arrow"
           onKeyPress={handleKeyPress}
-          onClick={() => scrollTo("#projects")}
+          onClick={() => scrollTo("#my-work")}
           role="button"
           tabIndex="0"
-          id="down-btn"
+          id="my-work"
         >
           <img src={down} alt="down arrow" />
         </div>
 
         <div className="container">
           <div className="hero-copy">
-            <h1>
-              Hi, my name is <Highlight color="blue">Leroy</Highlight> & I'm a
-              Front-end Web Developer.
-            </h1>
-            <h1 className="sub">
-              I build modern, aesthetically pleasing websites for ambitious
-              people and brands.
-            </h1>
+            <Reveal repeat>
+              <Tween
+                from={{ opacity: 0, y: "50px" }}
+                to={{ opacity: 1, y: 0 }}
+                stagger={0.2}
+                duration={0.5}
+                delay={0.75}
+              >
+                <h1>
+                  Hi, my name is <Highlight color="blue">Leroy</Highlight> & I'm
+                  a Front-end Web Developer.
+                </h1>
+                <h1 className="sub">
+                  I build modern, aesthetically pleasing websites for ambitious
+                  people and brands.
+                </h1>
 
-            <div className="cta">
-              <MyButtonScroll
-                onClick={() => scrollTo("#projects")}
-                to="#"
-                title="View work"
-              />
-              <MyButton to="/about" title="More about me" variant="secondary" />
-            </div>
+                <div className="cta">
+                  <MyButtonScroll
+                    onClick={() => scrollTo("#my-work")}
+                    to="#"
+                    title="View work"
+                  />
+                  <MyButton
+                    to="/about"
+                    title="More about me"
+                    variant="secondary"
+                  />
+                </div>
+              </Tween>
+            </Reveal>
           </div>
         </div>
       </section>

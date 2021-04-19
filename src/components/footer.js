@@ -7,6 +7,7 @@ import FacebookIcon from "@material-ui/icons/Facebook"
 
 import LinkedInIcon from "@material-ui/icons/LinkedIn"
 import GitHubIcon from "@material-ui/icons/GitHub"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 const Footer = () => {
   return (
@@ -23,35 +24,35 @@ const Footer = () => {
       <div className="footer-copy">
         <div className="external-links">
           <div className="content">
-            <a
+            <OutboundLink
               target="_blank"
               href="https://www.instagram.com/leroyclarkejr"
               to="https://www.instagram.com/leroyclarkejr"
             >
               <InstagramIcon fontSize="large" />
-            </a>
-            <a
+            </OutboundLink>
+            <OutboundLink
               target="_blank"
               href="https://github.com/ldcjrStudio"
               to="https://github.com/ldcjrStudio"
             >
               <GitHubIcon fontSize="large" />
-            </a>
-            <a
+            </OutboundLink>
+            <OutboundLink
               target="_blank"
               href="https://www.linkedin.com/in/leroy-clarke-jr/"
               to="https://www.linkedin.com/in/leroy-clarke-jr/"
             >
               <LinkedInIcon fontSize="large" />
-            </a>
+            </OutboundLink>
 
-            <a
+            <OutboundLink
               target="_blank"
               href="https://www.facebook.com/leroyclarkejr"
               to="https://www.facebook.com/leroyclarkejr"
             >
               <FacebookIcon fontSize="large" />
-            </a>
+            </OutboundLink>
           </div>
         </div>
       </div>

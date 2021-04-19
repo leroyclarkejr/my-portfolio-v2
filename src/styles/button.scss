@@ -17,6 +17,9 @@ $md: 575px;
   font-size: 18px;
   position: relative;
   vertical-align: middle;
+  &:focus {
+    outline: none;
+  }
 
   @media screen and (max-width: $md) {
     font-size: 16px;
