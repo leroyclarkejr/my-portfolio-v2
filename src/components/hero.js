@@ -1,5 +1,6 @@
 import React from "react"
 import MyButton from "./Button"
+import MyButtonScroll from "./ButtonScroll"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
 import noise from "../data/images/noise.png"
@@ -9,7 +10,7 @@ import down from "../data/images/down-arrow.svg"
 
 // import HeroGradient from "../components/glsl/heroGradient"
 import "../styles/hero.scss"
-import poster from "../data/images/gradient-poster.png"
+import poster from "../data/images/gradient-poster.jpeg"
 
 const Highlight = ({ color, children }) => (
   <span className={`relative highlight highlight-${color}`}>
@@ -63,6 +64,7 @@ const Hero = () => {
           onClick={() => scrollTo("#projects")}
           role="button"
           tabIndex="0"
+          id="down-btn"
         >
           <img src={down} alt="down arrow" />
         </div>
@@ -79,10 +81,10 @@ const Hero = () => {
             </h1>
 
             <div className="cta">
-              <MyButton
-                to="#projects"
+              <MyButtonScroll
+                onClick={() => scrollTo("#projects")}
+                to="#"
                 title="View work"
-                onClick={handleProjectScroll}
               />
               <MyButton to="/about" title="More about me" variant="secondary" />
             </div>

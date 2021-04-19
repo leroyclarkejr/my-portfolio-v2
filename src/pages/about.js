@@ -389,12 +389,12 @@ const About = data => {
                 It has become my purpose to use my coding skillset along with my
                 knowledge in Brand Strategy, UI design, SEO & Google Analytics
                 to help others maximize their potential in the digital world.
-                <span>
+                {/* <span>
                   <a>
                     <strong></strong>email me
                   </a>{" "}
                   if you're interested in any of these services.
-                </span>
+                </span> */}
               </p>
 
               <p>

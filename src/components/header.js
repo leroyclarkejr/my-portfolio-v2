@@ -97,21 +97,29 @@ const Header = () => {
           <div className="external-links">
             <div className="content">
               <a
+                target="_blank"
+                href="https://www.instagram.com/leroyclarkejr"
+                to="https://www.instagram.com/leroyclarkejr"
+              >
+                <InstagramIcon fontSize="large" />
+              </a>
+              <a
+                target="_blank"
                 href="https://github.com/ldcjrStudio"
                 to="https://github.com/ldcjrStudio"
               >
                 <GitHubIcon fontSize="large" />
               </a>
               <a
+                target="_blank"
                 href="https://www.linkedin.com/in/leroy-clarke-jr/"
                 to="https://www.linkedin.com/in/leroy-clarke-jr/"
               >
                 <LinkedInIcon fontSize="large" />
               </a>
-              <a href="google.com" to="https://www.instagram.com/leroyclarkejr">
-                <InstagramIcon fontSize="large" />
-              </a>
+
               <a
+                target="_blank"
                 href="https://www.facebook.com/leroyclarkejr"
                 to="https://www.facebook.com/leroyclarkejr"
               >
