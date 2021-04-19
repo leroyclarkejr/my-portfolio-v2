@@ -46,6 +46,10 @@
       h1 {
         margin-bottom: 12px;
       }
+      h1,
+      .cta {
+        opacity: 0;
+      }
     }
     .cta {
       height: 100%;
