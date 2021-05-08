@@ -13,7 +13,7 @@ const projectData = [
 
     url: "https://takeblaction.com",
     stack: "HTML5, SASS, Javascript ES6, React, Gatsby.js, GraphQL",
-    img: "tb",
+    img: `data.tb.childImageSharp.fluid`,
     key: 0,
   },
   {
