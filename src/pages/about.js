@@ -286,20 +286,17 @@ const About = data => {
                   <Fragment>
                     <img
                       src={me}
-                      alt="me"
                       className="slide"
                       alt="Leroy Clarke Jr Smiling"
                     />
 
                     <img
                       src={me3}
-                      alt="me"
                       className="slide"
                       alt="Leroy Clarke Jr in a coat"
                     />
                     <img
                       src={me2}
-                      alt="me"
                       className="slide"
                       alt="Leroy Clarke Jr Serioius"
                     />

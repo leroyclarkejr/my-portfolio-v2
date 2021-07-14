@@ -8,7 +8,6 @@ import { Tween, Reveal } from "react-gsap"
 
 // import HeroGradient from "../components/glsl/heroGradient"
 import "../styles/hero.scss"
-import poster from "../data/images/gradient-poster.jpeg"
 
 const Highlight = ({ color, children }) => (
   <span className={`relative highlight highlight-${color}`}>
