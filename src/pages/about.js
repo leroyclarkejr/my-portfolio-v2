@@ -9,7 +9,7 @@ import { gsap } from "gsap/all"
 
 import Layout from "../components/layout"
 import me from "../data/images/me.jpeg"
-import me2 from "../data/images/me-black-white.jpg"
+import me2 from "../data/images/me-black-white.jpeg"
 import me3 from "../data/images/official.jpg"
 import "../styles/styles.scss"
 
