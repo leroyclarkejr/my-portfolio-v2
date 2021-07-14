@@ -3,9 +3,6 @@ import MyButton from "./Button"
 import MyButtonScroll from "./ButtonScroll"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
-import noise from "../data/images/noise.png"
-import videoMP4 from "../data/images/gradient-final.mp4"
-import videoWEBM from "../data/images/gradient-final.webm"
 import down from "../data/images/down-arrow.svg"
 import { Tween, Reveal } from "react-gsap"
 
@@ -36,25 +33,6 @@ const Hero = () => {
     <>
       <div id="gradient"></div>
       <section id="hero">
-        <video
-          playsInline
-          muted
-          data-object-fit="cover"
-          className="my-video"
-          width="100%"
-          height="auto"
-          pre-load="none"
-          autoPlay={true}
-          loop
-          data-wf-ignore="true"
-          poster={poster}
-        >
-          <source src={videoMP4} type="video/mp4" />
-          <source src={videoWEBM} type="video/webm" />
-        </video>
-        <div className="home-hero-wrapper">
-          <img src={noise} alt="noise" className="noise" />
-        </div>
         <div className="hero-overlay"></div>
         <div
           className="down-arrow"

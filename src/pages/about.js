@@ -9,7 +9,7 @@ import { gsap } from "gsap/all"
 
 import Layout from "../components/layout"
 import me from "../data/images/me.jpeg"
-import me2 from "../data/images/gym-cropped.jpeg"
+import me2 from "../data/images/me-black-white.jpg"
 import me3 from "../data/images/official.jpg"
 import "../styles/styles.scss"
 
@@ -284,9 +284,25 @@ const About = data => {
               <Timeline
                 target={
                   <Fragment>
-                    <img src={me} alt="me" className="slide" />
-                    <img src={me2} alt="me" className="slide" />
-                    <img src={me3} alt="me" className="slide" />
+                    <img
+                      src={me}
+                      alt="me"
+                      className="slide"
+                      alt="Leroy Clarke Jr Smiling"
+                    />
+
+                    <img
+                      src={me3}
+                      alt="me"
+                      className="slide"
+                      alt="Leroy Clarke Jr in a coat"
+                    />
+                    <img
+                      src={me2}
+                      alt="me"
+                      className="slide"
+                      alt="Leroy Clarke Jr Serioius"
+                    />
                   </Fragment>
                 }
               >

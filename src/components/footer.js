@@ -16,8 +16,8 @@ const Footer = () => {
         <h6>
           Feel free to contact me if you're looking for a developer, have any
           questions, or just want to connect. Email me at{" "}
-          <a className="link" href="mailto:lclarkejr94@gmail.com">
-            lclarkejr94@gmail.com
+          <a className="link" href="mailto:hello@leroyclarkejr.com">
+            hello@leroyclarkejr.com
           </a>
         </h6>
       </div>

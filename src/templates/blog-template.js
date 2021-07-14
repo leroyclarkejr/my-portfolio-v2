@@ -12,16 +12,16 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Layout from "../components/layout"
 
 const BlogTemplate = ({ data }) => {
-  const blogPost = data.allContentfulBlogPost.nodes[0]
-  const options = {
-    renderNode: {
-      [BLOCKS.HEADING_1]: (node, children) => <h1>{children}</h1>,
-      [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
-    },
-    renderMark: {
-      [MARKS.CODE]: text => <code className="pre">{text}</code>,
-    },
-  }
+  // const blogPost = data.allContentfulBlogPost.nodes[0]
+  // const options = {
+  //   renderNode: {
+  //     [BLOCKS.HEADING_1]: (node, children) => <h1>{children}</h1>,
+  //     [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
+  //   },
+  //   renderMark: {
+  //     [MARKS.CODE]: text => <code className="pre">{text}</code>,
+  //   },
+  // }
 
   return (
     <Layout>
@@ -44,23 +44,23 @@ const BlogTemplate = ({ data }) => {
 
 export default BlogTemplate
 
-export const query = graphql`
-  {
-    allContentfulBlogPost {
-      nodes {
-        title
-        dateCreated(formatString: "MM/DD/YYYY")
-        category
-        id
-        content {
-          json
-        }
-        image {
-          fluid {
-            ...GatsbyContentfulFluid
-          }
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   {
+//     allContentfulBlogPost {
+//       nodes {
+//         title
+//         dateCreated(formatString: "MM/DD/YYYY")
+//         category
+//         id
+//         content {
+//           json
+//         }
+//         image {
+//           fluid {
+//             ...GatsbyContentfulFluid
+//           }
+//         }
+//       }
+//     }
+//   }
+// `

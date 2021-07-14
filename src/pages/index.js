@@ -110,6 +110,8 @@ const IndexPage = ({ data }) => {
                               ? data.tb.childImageSharp.fluid
                               : project.img === "jiffy"
                               ? data.jiffy.childImageSharp.fluid
+                              : project.img === "fifty"
+                              ? data.fifty.childImageSharp.fluid
                               : project.img === "valencia"
                               ? data.valencia.childImageSharp.fluid
                               : project.img === "pv1"

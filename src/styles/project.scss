@@ -17,12 +17,12 @@
   @media screen and (max-width: $sm) {
     flex: 0 0 100%;
   }
-  &:hover,
-  &:active {
-    box-shadow: $black 0px 0px 0px 1px inset, $secondary 10px 10px 0px -3px,
-      $black 10px 10px;
-    transform: translate(-10px, -10px);
-  }
+  // &:hover,
+  // &:active {
+  //   box-shadow: $black 0px 0px 0px 1px inset, $secondary 10px 10px 0px -3px,
+  //     $black 10px 10px;
+  //   transform: translate(-10px, -10px);
+  // }
 
   .image {
     width: 100%;

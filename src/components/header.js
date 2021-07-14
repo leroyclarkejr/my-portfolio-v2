@@ -44,7 +44,7 @@ const Header = () => {
   return (
     <header id="header">
       <div className="left-icon">
-        <Link to="/">{"< Leroy />"}</Link>
+        <Link to="/">Leroy Clarke Jr.</Link>
       </div>
 
       <div id="nav" ref={node}>
@@ -105,6 +105,12 @@ const Header = () => {
             <Link to="/about/" activeClassName="active">
               About
             </Link>
+            <OutboundLink
+              href="https://personal-things.s3.amazonaws.com/LeroyClarkeJrResume.pdf"
+              target="_blank"
+            >
+              Resume
+            </OutboundLink>
             {/* <Link to="/blog/" activeClassName="active">
               Blog
             </Link> */}
