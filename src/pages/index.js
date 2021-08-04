@@ -21,6 +21,7 @@ import "../styles/global.scss"
 import "../styles/typography.scss"
 import "../styles/projects.scss"
 import "../styles/project.scss"
+import { SpeakerNotesOff } from "@material-ui/icons"
 
 // import Progress from "../components/progress"
 
@@ -73,6 +74,12 @@ export const query = graphql`
 
 const IndexPage = ({ data }) => {
   // const [theme, setTheme] = useState("dark")
+
+  const handleClick = e => {
+    if (e.target.value === "#") {
+      e.preventDefault()
+    }
+  }
 
   return (
     <Layout>
@@ -129,15 +136,18 @@ const IndexPage = ({ data }) => {
                         <ul>
                           <li>{project.stack}</li>
                         </ul>
-
-                        <OutboundLink
-                          href={project.url}
-                          className="url-link my-button"
-                        >
-                          {project.url === "#" ? "Coming Soon!" : "See Live"}
-                        </OutboundLink>
-
-                        {/* <MyButton to="google.com" title="See live" /> */}
+                        {project.url === "#" ? (
+                          <span className="my-button url-link">
+                            Coming soon!
+                          </span>
+                        ) : (
+                          <OutboundLink
+                            href={project.url}
+                            className="url-link my-button"
+                          >
+                            See live
+                          </OutboundLink>
+                        )}
                       </div>
                     </div>
                   </div>

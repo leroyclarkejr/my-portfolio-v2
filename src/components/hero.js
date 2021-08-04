@@ -56,7 +56,7 @@ const Hero = () => {
               >
                 <h1>
                   Hi, my name is <Highlight color="blue">Leroy</Highlight> & I'm
-                  a Front-end Web Developer.
+                  a Front-end Engineer.
                 </h1>
                 <h1 className="sub">
                   I build modern, aesthetically pleasing websites for ambitious

@@ -298,7 +298,7 @@ const About = data => {
                     <img
                       src={me2}
                       className="slide"
-                      alt="Leroy Clarke Jr Serioius"
+                      alt="Leroy Clarke Jr Serious"
                     />
                   </Fragment>
                 }
@@ -397,8 +397,8 @@ const About = data => {
                     solver.
                   </h1>
                   <p>
-                    I'm Leroy - A self taught Front-end Web Developer living in
-                    New Jersey.
+                    I'm Leroy - A self taught Front-end Engineer living in New
+                    Jersey.
                   </p>
                   <p>
                     I ultimately decided to learn to code because of my love for
