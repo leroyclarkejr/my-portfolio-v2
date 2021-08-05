@@ -51,7 +51,7 @@ const projectData = [
     title: "My First Portfolio",
     description:
       "I developed my first web dev portfolio using React router to create a Progressive Web Application feel and a Javscript library to create 3D effects.",
-    url: "https://leroyclarkejr.com",
+    url: "https://lerryportfolio.netlify.app",
     stack: "HTML5, SASS, Javascript ES6, React,",
     img: "pv1",
     key: 4,
