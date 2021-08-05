@@ -21,7 +21,7 @@ import "../styles/global.scss"
 import "../styles/typography.scss"
 import "../styles/projects.scss"
 import "../styles/project.scss"
-import { SpeakerNotesOff } from "@material-ui/icons"
+// import { SpeakerNotesOff } from "@material-ui/icons"
 
 // import Progress from "../components/progress"
 
@@ -73,14 +73,6 @@ export const query = graphql`
 `
 
 const IndexPage = ({ data }) => {
-  // const [theme, setTheme] = useState("dark")
-
-  const handleClick = e => {
-    if (e.target.value === "#") {
-      e.preventDefault()
-    }
-  }
-
   return (
     <Layout>
       <SEO title="Home" />

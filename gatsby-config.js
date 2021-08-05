@@ -18,8 +18,8 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-image`,
     `gatsby-transformer-remark`,
-    // `gatsby-plugin-advanced-sitemap`,
-    // `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-advanced-sitemap`,
+    `gatsby-plugin-robots-txt`,
     `gatsby-plugin-smoothscroll`,
     `gatsby-remark-video-poster`,
     `gatsby-plugin-remove-serviceworker`,
@@ -58,11 +58,25 @@ module.exports = {
         once: true, // Defines if animation needs to be launched once
       },
     },
+    // {
+    //   resolve: `gatsby-plugin-google-gtag`,
+    //   options: {
+    //     // You can add multiple tracking ids and a pageview event will be fired for all of them.
+    //     trackingIds: [
+    //       "GA-TRACKING_ID", // Google Analytics / GA
+    //     ],
+    //     // This object is used for configuration specific to this plugin
+    //     pluginConfig: {
+    //       // Puts tracking script in the head instead of the body
+    //       head: false,
+    //     },
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // The property ID; the tracking code won't be generated without it
-        trackingId: "UA-167200825-3",
+        trackingId: "UA-204244690-1",
         // Defines where to place the tracking script - `true` in the head and `false` in the body
         head: false,
       },
