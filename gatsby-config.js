@@ -18,7 +18,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-image`,
     `gatsby-transformer-remark`,
-    `gatsby-plugin-advanced-sitemap`,
+    // `gatsby-plugin-advanced-sitemap`,
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-smoothscroll`,
     `gatsby-remark-video-poster`,
